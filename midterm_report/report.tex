@@ -9,7 +9,7 @@
 \usepackage{hyperref}
 \usepackage{url}
 
-
+\usepackage{tikz}
 
 \usepackage{physics}
 
@@ -58,7 +58,14 @@
 \subsection{Industrial Applications}
 
 \section{Mechanical and Mechanism Analysis}
+
 \subsection{Drive Method and Transmission}
+\begin{tikzpicture}
+    \draw[blue] (0,0) -- (-3, 1);
+    \filldraw[black] (0,0) circle (2pt) node[anchor=north]{A};
+    \filldraw[black] (-3,1) circle (2pt) node[anchor=south]{B};
+\end{tikzpicture}
+
 \subsection{Fingers and Wrist Mechanisms}
 \subsection{Wolf Claw Mechanism Comparison}
 \subsubsection{Version 1: Planetary Gear}
