@@ -1,21 +1,18 @@
 # Fdb version 4
-["bibtex report"] 0 "report.aux" "report.bbl" "report" 0 0
-  "References.bib" 0 -1 0 ""
+["bibtex report"] 1761956163.94943 "report.aux" "report.bbl" "report" 1761956167.12221 0
+  "./references.bib" 1761956020 130 54fa28c014a927b120e8b735861a124d ""
   "c:/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1761949715 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "report.aux" 0 -1 0 "pdflatex"
+  "report.aux" 1761956165 2457 86ff46071e6e35c0ad3e25ab8a101843 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1761955814.29433 "c:/Users/Bryan/Documents/Projects/Exoskeleton Arm Armor/exoskeleton-robotic-hand-with-wolf-claw-mechanism/midterm_report/report.tex" "report.pdf" "report" 1761955816.12578 0
-  "c:/Users/Bryan/Documents/Projects/Exoskeleton Arm Armor/exoskeleton-robotic-hand-with-wolf-claw-mechanism/midterm_report/report.tex" 1761952529 1785 6cc05b6e8a32f721c0756d23b8ad2a53 ""
+["pdflatex"] 1761956164.54568 "c:/Users/Bryan/Documents/Projects/Exoskeleton Arm Armor/exoskeleton-robotic-hand-with-wolf-claw-mechanism/midterm_report/report.tex" "report.pdf" "report" 1761956167.12271 0
+  "c:/Users/Bryan/Documents/Projects/Exoskeleton Arm Armor/exoskeleton-robotic-hand-with-wolf-claw-mechanism/midterm_report/report.tex" 1761956160 1786 741fefaae9604bde9c216cf4481cda80 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1761950970 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1761949292 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1761949292 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
-  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1761950026 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1761950026 1324 c910af8c371558dc20f2d7822f66fe64 ""
-  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1761950026 1332 f817c21a1ba54560425663374f1b651a ""
-  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1761950026 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1761950026 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1761950026 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1761950026 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -31,10 +28,12 @@
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1761950026 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1761950026 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1761950026 1120 8b7d695260f3cff42e636090a8002094 ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1761949292 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1761950026 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1761949292 32080 340ef9bf63678554ee606688e7b5339d ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1761949292 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1761949292 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1761949292 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1761949292 36118 fad905eba93cff5bce1e185fe980a177 ""
   "c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1761952417 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1761949732 40635 c40361e206be584d448876bba8a64a3b ""
   "c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty" 1761949744 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -88,11 +87,11 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1761954761 5574153 af86687748baf417d9e7d549313527be ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1761955134 3629594 a3080ff87845d09afd8bc87e9b492b0a ""
   "c:/texlive/2025/texmf.cnf" 1761954732 713 e69b156964470283e0530f5060668171 ""
-  "report.aux" 1761955815 2370 be94964a59d8bcbdcb602b7845215903 "pdflatex"
-  "report.bbl" 0 -1 0 "bibtex report"
-  "report.out" 1761955815 3214 55823fa30f3b9cada78f4bd4189ff81d "pdflatex"
-  "report.tex" 1761952529 1785 6cc05b6e8a32f721c0756d23b8ad2a53 ""
-  "report.toc" 1761955815 1419 f82478bcdc1581d53bc3eb33ecdc17e4 "pdflatex"
+  "report.aux" 1761956165 2457 86ff46071e6e35c0ad3e25ab8a101843 "pdflatex"
+  "report.bbl" 1761956164 144 babeeb7f7f8ae78c2652d1da5ae6103a "bibtex report"
+  "report.out" 1761956165 3204 6f5136c9ea2a59bac0a61f5178fbc42a "pdflatex"
+  "report.tex" 1761956160 1786 741fefaae9604bde9c216cf4481cda80 ""
+  "report.toc" 1761956165 1421 fd91452333315366433133f83ef7c1f2 "pdflatex"
   (generated)
   "report.aux"
   "report.log"
