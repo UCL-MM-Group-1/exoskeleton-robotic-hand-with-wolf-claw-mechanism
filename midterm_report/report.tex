@@ -4,6 +4,7 @@
 \usepackage{sfmath}
 \usepackage{amsmath}
 \usepackage{graphics}
+\usepackage{graphicx}
 
 \usepackage[super, sort&compress]{natbib}
 \usepackage{hyperref}
@@ -27,7 +28,7 @@
 
 \title{
     Mechatronics and Making \\
-    Mid Project Report \\
+    Mid-Term Project Report \\
     Exoskeleton Robotic Hand With Wolf Claw Mechanism
 }
 
@@ -63,10 +64,10 @@
 \section{Mechanical and Mechanism Analysis}
 
 \subsection{Drive Method and Transmission}
-This robotic hand exoskeleton uses an acceleration-based machinery system. 
-Therefore, the movements of the finger will be amplified by this mechanism. 
+This robotic hand exoskeleton uses an acceleration-based machinery system.
+Therefore, the movements of the finger will be amplified by this mechanism.
 
-This mechanism can do that through a planetary gear mechanism, 
+This mechanism can do that through a planetary gear mechanism,
 whereas a belt system and a string transmission system are also needed.
 
 Details of the transmission process shows below:
@@ -87,22 +88,28 @@ Details of the transmission process shows below:
 		\tikzstyle{arrow} = [thick,->,>=stealth]
 
 		% Nodes
-		\node (start) [io] {User Finger Flexion};
+		\node (start) [io] {User's Finger Movement};
 
-		\node (tendon) [process, below of=start, yshift=-1cm] {Overhead Tendon Tension};
+		\node (tendon) [process, below of=start, yshift=-1cm] {String Movement};
 
-		\node (ring) [process, below of=tendon, yshift=-1cm] {Ring Gear Rotation Input};
+		\node (ring) [process, below of=tendon, yshift=-1cm] {
+			Planetary Gear System \\
+			Ring Gear Rotation (Input)
+		};
 
 		\node (planetary) [process, below of=ring, yshift=-1cm] {
 			Planetary Gear System \\
 			12.7:1 Acceleration
 		};
 
-		\node (sun) [process, below of=planetary, yshift=-1cm] {Sun Gear High-Speed Output};
+		\node (sun) [process, below of=planetary, yshift=-1cm] {
+			Planetary Gear System \\
+			Sun Gear High-Speed (Output)
+		};
 
-		\node (pulley) [process, below of=sun, yshift=-1cm] {Dual Pulley Drive};
+		\node (pulley) [process, below of=sun, yshift=-1cm] {Belt Movement};
 
-		\node (belt) [process, below of=pulley, yshift=-1cm] {Timing Belt Movement};
+		\node (belt) [process, below of=pulley, yshift=-1cm] {Blade Movement};
 
 		\node (blade) [io, below of=belt, yshift=-1cm] {
 			Blade Extension \\
@@ -133,30 +140,50 @@ Details of the transmission process shows below:
 
 \end{center}
 
+\pagebreak
 \subsubsection{Transmission Process Details}
 
+\textbf{User's Input (Finger Movement)}
+
+The linear movement of the string that is deployed over the finger is created by the finger's flexion.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{example-image}
+	\caption{figure exoskeleton design}
+	\label{fig:robotic figure}
+\end{figure}
+
+Total displacement of the string overhead by calculation:
+
+\begin{equation*}
+	r = 0
+	P = 0
+\end{equation*}
+
+\hrule
+
 \textbf{Biomechanical Input (Finger Flexion):}
-Natural finger flexion creates geometric displacement through 
-overhead tendon routing on the finger dorsal side. 
+Natural finger flexion creates geometric displacement through
+overhead tendon routing on the finger dorsal side.
 
 Using Smith et al's tendon displacement equation:
 
 \begin{equation}
-\Delta L_t = k_f \cdot \theta_f
+	\Delta L_t = k_f \cdot \theta_f
 \end{equation}
 and substituting typical finger geometry data ($k_f = 0.8$ mm/degree for index finger), we then get approximately 24 mm tendon displacement for 30 degrees of flexion. Finally, this linear displacement provides the input to the transmission system.
 
 \textbf{Tendon to Rotary Conversion:}
 The tendon wraps around a drum connected to the ring gear, converting linear displacement to rotational input. Using the drum conversion equation:
 \begin{equation}
-\theta_r = \dfrac{\Delta L_t}{r_d}
+	\theta_r = \dfrac{\Delta L_t}{r_d}
 \end{equation}
 and substituting our drum radius ($r_d = 5$ mm) and previous tendon displacement (24 mm), we then get 4.8 radians of ring gear rotation. Finally, this rotational input drives the planetary gear system.
 
 \textbf{Planetary Gear Acceleration:}
 The ring gear serves as input in an unconventional configuration where planet gears transfer motion to the sun gear. Using the planetary gear ratio equation:
 \begin{equation}
-\theta_s = 12.66 \cdot \theta_r
+	\theta_s = 12.66 \cdot \theta_r
 \end{equation}
 and substituting our ring gear rotation (4.8 radians), we then get 60.77 radians of sun gear rotation. Finally, this represents the 12.66:1 acceleration that enables significant blade extension.
 
@@ -166,7 +193,7 @@ The sun gear shaft drives dual synchronized pulleys with timing belts maintainin
 \textbf{Final Blade Deployment:}
 Belt movement translates to linear blade extension through the complete kinematic chain. Using the comprehensive deployment equation:
 \begin{equation}
-L_b = 12.66 \cdot \dfrac{k_f \cdot \theta_f}{r_d} \cdot r_p
+	L_b = 12.66 \cdot \dfrac{k_f \cdot \theta_f}{r_d} \cdot r_p
 \end{equation}
 and substituting all our parameters ($k_f = 0.8$, $\theta_f = 30^\circ$, $r_d = 5$ mm, $r_p = 3$ mm), we then get 182.3 mm total blade extension. Finally, this demonstrates how subtle finger movements (30°) result in significant tool deployment (182 mm).
 
@@ -178,8 +205,8 @@ The complete transmission system achieves:
 Where small finger movements ($\theta_f$) result in proportionally larger blade extensions ($L_b$), making the system both responsive and precise for its intended applications.
 
 
-This acceleration-based transmission represents an innovative approach to 
-exoskeleton tool deployment, leveraging planetary gear mechanics to amplify 
+This acceleration-based transmission represents an innovative approach to
+exoskeleton tool deployment, leveraging planetary gear mechanics to amplify
 natural human movements into effective tool operations.
 \subsection{Fingers and Wrist Mechanisms}
 \subsection{Wolf Claw Mechanism Comparison}
