@@ -1,8 +1,8 @@
-*.aux
-*.log
-*.gz
-*.toc   
-*.bbl
-*.blg
-*.out
-*.fdb_latexmk
+# *.aux
+# *.log
+# *.gz
+# *.toc   
+# *.bbl
+# *.blg
+# *.out
+# *.fdb_latexmk
