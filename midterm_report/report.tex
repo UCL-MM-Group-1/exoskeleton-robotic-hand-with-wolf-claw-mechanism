@@ -1,11 +1,12 @@
 \documentclass[12pt]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage[UTF8]{ctex}
 \usepackage{sfmath}
 \usepackage{amsmath}
 \usepackage{graphics}
 \usepackage{graphicx}
-\usepackage{subfigure}
+\usepackage{subfig}
 
 \usepackage[super, sort&compress]{natbib}
 \usepackage{hyperref}
@@ -46,6 +47,8 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
+
+
 \begin{document}
 
 \begin{titlepage}
@@ -62,6 +65,7 @@
 \subsection{Industrial Applications}
 
 \pagebreak
+
 \section{Mechanical and Mechanism Analysis}
 
 \subsection{Drive Method and Transmission}
@@ -74,7 +78,6 @@ whereas a belt system and a string transmission system are also needed.
 Details of the transmission process shows below:
 
 \begin{center}
-
 	\begin{tikzpicture}[scale=0.8]
 
 		% Define styles
@@ -100,7 +103,7 @@ Details of the transmission process shows below:
 
 		\node (planetary) [process, below of=ring, yshift=-1cm] {
 			Planetary Gear System \\
-			12.7:1 Acceleration
+			Acceleration
 		};
 
 		\node (sun) [process, below of=planetary, yshift=-1cm] {
@@ -113,8 +116,7 @@ Details of the transmission process shows below:
 		\node (belt) [process, below of=pulley, yshift=-1cm] {Blade Movement};
 
 		\node (blade) [io, below of=belt, yshift=-1cm] {
-			Blade Extension \\
-			12.7 x Amplification
+			Blade Extension
 		};
 
 
@@ -122,115 +124,66 @@ Details of the transmission process shows below:
 		\draw [arrow] (start) -- (tendon);
 		\draw [arrow] (tendon) -- node[right] {Linear → Rotary} (ring);
 		\draw [arrow] (ring) -- (planetary);
-		\draw [arrow] (planetary) -- node[right] {Speed ×12.7} (sun);
-		\draw [arrow] (sun) -- (pulley);
+		\draw [arrow] (planetary) -- (sun);
+		\draw [arrow] (sun) -- node[right] {Rotary → Linear}(pulley);
 		\draw [arrow] (pulley) -- (belt);
-		\draw [arrow] (belt) -- node[right] {Rotary → Linear} (blade);
-
-		% Kinematic equations
-		\node (eq1) [right of=ring, xshift=4cm] {
-			$\theta_r = \dfrac{\Delta L_t}{r_d}$
-		};
-		\node (eq2) [right of=planetary, xshift=4cm] {
-			$\theta_s = 12.7 \cdot \theta_r$
-		};
-		\node (eq3) [right of=blade, xshift=4cm] {
-			$L_b = 12.7 \cdot \dfrac{k_f \cdot \theta_f}{r_d} \cdot r_p$
-		};
+		\draw [arrow] (belt) -- (blade);
 	\end{tikzpicture}
-
 \end{center}
 
 \pagebreak
 
-\subsubsection{Transmission Process Details}
+\subsection{Hand Exoskeleton Mechanisms}
+\subsubsection{Hand Structure}
+根据Heo等人（2012）的综述，人手包含19块骨骼和14个关节（不包括腕骨）。手指关节主要包括：
 
-\textbf{User's Input (Finger Movement)}
+掌指关节（MCP）：具有2个自由度（屈曲/伸展、外展/内收）
 
-The linear movement of the string that is deployed over the finger is created by the finger's flexion.
+近端指间关节（PIP） 和 远端指间关节（DIP）：各具1个自由度（屈曲/伸展）
 
-Figure \ref{Fig.mid_finger} has two sub-figures: 
-Figure \ref{Fig.mid_finger_curved} Describe the details and data when finger curved,
-Figure \ref{Fig.mid_finger_extended} Describe the details and data when finger extended.
+拇指 的腕掌关节（CMC）为鞍状关节，具有2个自由度，赋予其更大的灵活性。
 
+在休息姿态下，MCP关节屈曲约45°，PIP屈曲30–45°，DIP屈曲10–20°。这些数据对于设计外骨骼时的运动范围和安全性至关重要。
 
-\begin{figure}[htbp]
-	\centering 
-	\subfigure[mid-finger curved]{
-		\label{Fig.mid_finger_curved}
-		\includegraphics[width=0.4\textwidth]{imgs/mid_fig_curved.PNG}}
-	\subfigure[mid-finger extended]{
-		\label{Fig.mid_finger_extended}
-		\includegraphics[width=0.5\textwidth]{imgs/mid_fig_extend.PNG}}
-	\caption{mid-finger exoskeleton design}
-	\label{Fig.mid_finger}
-\end{figure}
-
-Total displacement of the string overhead by calculation:\cite{bryan}
-
-\begin{equation*}
-	r = 0
-	P = 0
-\end{equation*}
-
-
-\hrule
-
-% \textbf{Biomechanical Input (Finger Flexion):}
-% Natural finger flexion creates geometric displacement through
-% overhead tendon routing on the finger dorsal side.
-
-% Using Smith et al's tendon displacement equation:
-
-% \begin{equation}
-% 	\Delta L_t = k_f \cdot \theta_f
-% \end{equation}
-% and substituting typical finger geometry data ($k_f = 0.8$ mm/degree for index finger), we then get approximately 24 mm tendon displacement for 30 degrees of flexion. Finally, this linear displacement provides the input to the transmission system.
-
-% \textbf{Tendon to Rotary Conversion:}
-% The tendon wraps around a drum connected to the ring gear, converting linear displacement to rotational input. Using the drum conversion equation:
-% \begin{equation}
-% 	\theta_r = \dfrac{\Delta L_t}{r_d}
-% \end{equation}
-% and substituting our drum radius ($r_d = 5$ mm) and previous tendon displacement (24 mm), we then get 4.8 radians of ring gear rotation. Finally, this rotational input drives the planetary gear system.
-
-% \textbf{Planetary Gear Acceleration:}
-% The ring gear serves as input in an unconventional configuration where planet gears transfer motion to the sun gear. Using the planetary gear ratio equation:
-% \begin{equation}
-% 	\theta_s = 12.66 \cdot \theta_r
-% \end{equation}
-% and substituting our ring gear rotation (4.8 radians), we then get 60.77 radians of sun gear rotation. Finally, this represents the 12.66:1 acceleration that enables significant blade extension.
-
-% \textbf{Pulley and Belt Transmission:}
-% The sun gear shaft drives dual synchronized pulleys with timing belts maintaining parallel blade alignment. Three blades are mounted perpendicular between the belts. Using the pulley-belt transmission relationship, the rotational motion is converted to linear blade movement with the pulley radius ($r_p = 3$ mm) determining the final extension.
-
-% \textbf{Final Blade Deployment:}
-% Belt movement translates to linear blade extension through the complete kinematic chain. Using the comprehensive deployment equation:
-% \begin{equation}
-% 	L_b = 12.66 \cdot \dfrac{k_f \cdot \theta_f}{r_d} \cdot r_p
-% \end{equation}
-% and substituting all our parameters ($k_f = 0.8$, $\theta_f = 30^\circ$, $r_d = 5$ mm, $r_p = 3$ mm), we then get 182.3 mm total blade extension. Finally, this demonstrates how subtle finger movements (30°) result in significant tool deployment (182 mm).
-
-% The complete transmission system achieves:
-% \begin{equation}
-% 	\text{Overall Ratio} = \underbrace{\frac{k_f}{r_d}}_{\text{Tendon}} \times \underbrace{12.7}_{\text{Planetary}} \times \underbrace{r_p}_{\text{Pulley}} = 12.7 \cdot \frac{k_f \cdot r_p}{r_d}
-% \end{equation}
-
-% Where small finger movements ($\theta_f$) result in proportionally larger blade extensions ($L_b$), making the system both responsive and precise for its intended applications.
-
-
-% This acceleration-based transmission represents an innovative approach to
-% exoskeleton tool deployment, leveraging planetary gear mechanics to amplify
-% natural human movements into effective tool operations.
-\subsection{Fingers and Wrist Mechanisms}
 \subsection{Wolf Claw Mechanism Comparison}
 \subsubsection{Version 1: Planetary Gear}
 \subsubsection{Version 2: Compound Gear Train}
 
 
 \pagebreak
+
 \section{Mathematical Modelling and Analysis}
 \subsection{Fingers and Wrist Modelling}
+\textbf{User's Input (Finger Movement)}
+
+The linear movement of the string that is deployed over the finger is created by the finger's flexion.
+
+Figure~\ref{fig:mid_finger} has two sub-figures:
+Figure~\ref{fig:mid_finger_curved} describes the details and data when finger curved,
+Figure~\ref{fig:mid_finger_extended} describes the details and data when finger extended.
+
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[mid-finger curved\label{fig:mid_finger_curved}]{
+		\includegraphics[width=0.4\textwidth]{imgs/mid_fig_curved.PNG}
+	}
+	\hfill
+	\subfloat[mid-finger extended\label{fig:mid_finger_extended}]{
+		\includegraphics[width=0.5\textwidth]{imgs/mid_fig_extend.PNG}
+	}
+	\caption{mid-finger exoskeleton design}\label{fig:mid_finger}
+\end{figure}
+
+Total displacement of the string overhead by calculation:\cite{bryan}
+
+\begin{align*}
+	\Delta L             & = L_{DIP} + L_{PIP} + L_{MCP}, \quad \text{where}     \\
+	L_{DIP}              & = 11 \times \frac{45}{360} \times 2\pi \approx 8.64,  \\
+	L_{PIP}              & = 11 \times \frac{60}{360} \times 2\pi \approx 11.52, \\
+	L_{MCP}              & = (25 - 11) \times \frac{85}{360} \times 2\pi \approx 20.77 \\
+	\Rightarrow \Delta L & \approx 8.64 + 11.52 + 20.77 = \boxed{40.93\text{mm}} \\
+\end{align*}
 \subsection{Wolf Claw Mechanism \- Version 1: Planetary Gear}
 \subsection{Wolf Claw Mechanism \- Version 2: Compound Gear Train}
 
