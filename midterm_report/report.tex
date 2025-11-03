@@ -1,12 +1,13 @@
 \documentclass[12pt]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[UTF8]{ctex}
 \usepackage{sfmath}
 \usepackage{amsmath}
 \usepackage{graphics}
 \usepackage{graphicx}
 \usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{lipsum}
 
 \usepackage[super, sort&compress]{natbib}
 \usepackage{hyperref}
@@ -59,6 +60,8 @@
 
 \pagebreak
 
+% ======== SECTION I ==========
+
 \section{Introduction}
 \subsection{Project Objectives and Description}
 \subsection{Similar Mechanisms}
@@ -66,16 +69,18 @@
 
 \pagebreak
 
+% ======== SECTION II =========
+
 \section{Mechanical and Mechanism Analysis}
 
 \subsection{Drive Method and Transmission}
-This robotic hand exoskeleton uses an acceleration-based machinery system.
-Therefore, the movements of the finger will be amplified by this mechanism.
+This robotic hand exoskeleton uses an acceleration-based machinery system, 
+amplifying the movements of the finger. 
 
-This mechanism can do that through a planetary gear mechanism,
-whereas a belt system and a string transmission system are also needed.
+This is achieved using a planetary gear mechanism connected to a string 
+transmission and a pulley and belt system.
 
-Details of the transmission process shows below:
+Details of the transmission process shown below:
 
 \begin{center}
 	\begin{tikzpicture}[scale=0.8]
@@ -134,16 +139,69 @@ Details of the transmission process shows below:
 \pagebreak
 
 \subsection{Hand Exoskeleton Mechanisms}
-\subsubsection{Hand Structure}
-根据Heo等人（2012）的综述，人手包含19块骨骼和14个关节（不包括腕骨）。手指关节主要包括：
 
-掌指关节（MCP）：具有2个自由度（屈曲/伸展、外展/内收）
+\subsubsection{Hand Biomechanics}
+The human hand comprises 19 bones and 14 joints 
+(excluding the carpal bones). 
 
-近端指间关节（PIP） 和 远端指间关节（DIP）：各具1个自由度（屈曲/伸展）
+The exoskeleton design is based on the natural anatomy of 
+the human hand~(figure~\ref{fig:hand_skeleton}), particularly the MCP, PIP, and 
+DIP joints that ensure the finger can flex and extend.
 
-拇指 的腕掌关节（CMC）为鞍状关节，具有2个自由度，赋予其更大的灵活性。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{imgs/bones_joints_of_hand.png}
+	\caption{bones and joints of a human hand}\label{fig:hand_skeleton}
+\end{figure}
 
-在休息姿态下，MCP关节屈曲约45°，PIP屈曲30–45°，DIP屈曲10–20°。这些数据对于设计外骨骼时的运动范围和安全性至关重要。
+The finger joints mainly include:
+
+Metacarpophalangeal Joint (MCP): 
+Has 2 degrees of freedom (flexion/extension, abduction/adduction).
+
+Both Proximal Interphalangeal Joint (PIP) and Distal Interphalangeal Joint (DIP): 
+Has 1 degree of freedom (flexion/extension).
+
+The Carpometacarpal Joint (CMC) of the thumb 
+is a saddle joint with 2 degrees of freedom, granting it greater flexibility.
+
+In the resting posture, the MCP joint is flexed approximately 45°, 
+the PIP joint between 30°--45°, and the DIP joint between 10°--20°. 
+This data is crucial for defining the range of motion and ensuring safety in exoskeleton design.
+
+\textbf{Wrist Structure Analysis}
+
+The wrist has 2 degrees of freedom: flexion/extension and radial/ulnar deviation. 
+
+\subsubsection{Selection of Mechanism Type}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.48\textwidth]{imgs/mechanism_types.png}
+    \caption{mechanism types} \label{fig:mechanism_types}
+\end{wrapfigure}
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.4\textwidth]{imgs/mechanism_types.png}
+% 	\caption{mechanism types}\label{fig:mechanism_types}
+% \end{figure}
+
+Among the mechanisms illustrated in 
+Figure~\ref{fig:mechanism_types}, the direct matching of joint 
+centers (Figure~\ref{fig:mechanism_types}.a) was 
+selected for our design because it provides a structurally 
+simple and compact solution without requiring additional 
+linkages or complex actuation. 
+This approach minimizes mechanical complexity, 
+reduces system weight, and simplifies both fabrication and control.
+
+Furthermore, direct alignment of the exoskeleton joints with the 
+anatomical centers ensures high kinematic accuracy and reliability, 
+as no additional compensation for remote or compliant motion is necessary. 
+
+Therefore, the direct joint-center matching method offers the most 
+efficient and practical solution for this application.
 
 \subsection{Wolf Claw Mechanism Comparison}
 \subsubsection{Version 1: Planetary Gear}
@@ -152,13 +210,15 @@ Details of the transmission process shows below:
 
 \pagebreak
 
+% ======== SECTION III ========
+
 \section{Mathematical Modelling and Analysis}
 \subsection{Fingers and Wrist Modelling}
-\textbf{User's Input (Finger Movement)}
+\textbf{Finger and Overhead String Movement}
 
 The linear movement of the string that is deployed over the finger is created by the finger's flexion.
 
-Figure~\ref{fig:mid_finger} has two sub-figures:
+Figure~\ref{fig:mid_finger} has two sub-figures, 
 Figure~\ref{fig:mid_finger_curved} describes the details and data when finger curved,
 Figure~\ref{fig:mid_finger_extended} describes the details and data when finger extended.
 
@@ -184,10 +244,35 @@ Total displacement of the string overhead by calculation:\cite{bryan}
 	L_{MCP}              & = (25 - 11) \times \frac{85}{360} \times 2\pi \approx 20.77 \\
 	\Rightarrow \Delta L & \approx 8.64 + 11.52 + 20.77 = \boxed{40.93\text{mm}} \\
 \end{align*}
+
+\textbf{Wrist Movement}
+
+In hand exoskeletons, the wrist section is relatively 
+complex due to its two degrees of freedom (DOFs) 
+for upward-downward and left-right movements, 
+with their rotation centers almost coinciding. 
+This poses a challenge for the design of the mechanical 
+structure. We have designed a special mechanism, functionally 
+similar to a universal joint, to serve as the exoskeleton 
+for the wrist, as illustrated in the figure~\ref{fig:wrist_demo}.
+
+The palm is represented by an oval in the diagram, 
+and the linkage structure connecting the palm and 
+fingers still requires careful design due to the 
+constraints of the narrow aperture space.
+
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.8\textwidth]{imgs/wrist_demo.PNG}
+	\caption{demostration of wrist}\label{fig:wrist_demo}
+\end{figure}
+
+
 \subsection{Wolf Claw Mechanism \- Version 1: Planetary Gear}
 \subsection{Wolf Claw Mechanism \- Version 2: Compound Gear Train}
 
-\pagebreak
+% ======== SECTION IV =========
+
 \section{Conclusion and Future Work}
 
 \pagebreak
