@@ -60,17 +60,63 @@
 
 \pagebreak
 
-% ======== SECTION I ==========
 
-\section{Project Objectives and Description}
+
+\section{Project Objectives and Description}	%% ============================ SECTION I ===================================
+
+We examined the percentage of people who were victims of stalking in the last year, 
+with 19.9\% of women since the age of 16 suffering from this abuse, 
+of which 8.05\% were single women~\cite{ons_stalking_2025}. 
+This data highlights the significance of our mechanism, 
+as it increases the safety of the victim when physically approached by the stalker. 
+However, this mechanism would be considered a weapon with the intention of using 
+it for self-defence, which violates the Criminal Justice and Immigration Act 2008\cite{CriminalJustice2008}. 
+Hence, to legalise our mechanism, we modified the dangerous component (the three wolf claws) 
+into a blunt claw-shaped design made of PLA materials. With the aim of this mechanism serving 
+as a cosplay prop and the objective of helping with self-defence- the self-defence aspect will 
+be further examined in section 2.3, wolf claw mechanism comparison. 
+
 \subsection{Similar Mechanisms}
-\subsection{Industrial Applications}
+
+There are many applications of exoskeleton robotic hands in 
+diverse fields (e.g. rehabilitation medicine) in which most 
+of these exoskeleton hands are powered. Our mechanism is purely 
+passive as it allows a lightweight approach and only relies on 
+the user’s instinctive movements. Powered exoskeleton robotic 
+hands tend to have higher demands regarding control schemes 
+and mechanical design (involving actuators).  
+
+The robotic hand should have the same DOFs as a human, yet 
+given the compact size of the hand, it becomes impractical to 
+actively control every joint~\cite{rosen2019wearableC8} when the complexity of the control 
+algorithms increases with the DOFs in a powered exoskeleton 
+robotic hand. 
+Thus, some motions are left passive (passive DOF), 
+power and control signals of the hand must also be 
+routed such that it does not interfere with motion of 
+arm, where we will be placing the wolf claw mechanism. 
+Taking the increased mass and inertia into consideration, 
+we have decided to design our mechanism in a purely mechanical 
+way since there is no reliance on power source and is less 
+susceptible to technical malfunctions.
+
+A 1 DOF kinematic architecture~\cite{rosen2019wearableC9} has been used for the DIP 
+(distal Interphalangeal joint) and PIP (proximal Interphalangeal joint) 
+as it allows precise replication of the natural grasping motion.
+
+\subsection{Industrial Applications} 
+
+The exoskeleton robotic hand of our mechanism is purely passive, 
+providing support for the fingers and hand during tasks that require 
+a sustained grip on tools for long periods. By redistributing the physical 
+load from the fingers to the palm exoskeleton (connected to the wrist and arm) 
+and supporting proper posture, the user is less likely to suffer from overuse injuries. 
+This mechanism could be used for repetitive tasks, such as manual labour in construction, 
+or it could be used in further designing or developing powered exoskeleton hands.
 
 \pagebreak
 
-% ======== SECTION II =========
-
-\section{Mechanical and Mechanism Analysis}
+\section{Mechanical and Mechanism Analysis}     %% ============================ SECTION II ==================================
 
 \subsection{Drive Method and Transmission}
 This robotic hand exoskeleton uses an acceleration-based machinery system, 
@@ -199,16 +245,135 @@ Therefore, the direct joint-center matching method offers the most
 efficient and practical solution for this application. 
 We have chosen to take a similar approach
 
-\subsection{Wolf Claw Mechanism Comparison}
-\subsubsection{Version 1: Planetary Gear}
-\subsubsection{Version 2: Compound Gear Train}
+\subsection{Wolf Claw Mechanism}
+\textbf{Design of wolf claw}
+
+Consider a wolf claw made of multiple sections:  
+
+\textbf{FIGURE :::: TODO}
+
+For this prototype the whole mechanism would be more portable due to these retractable features. 
+For these retractable features to be implemented, the inner structure of each section of the wolf 
+claw would be hollow, with only the tip of the claw being solid.  
+
+The main challenges in this include how each section is going to connect as the number of 
+sections increase, thus each section becomes thinner and the room for connection between 
+adjacent links being reduced. When this wolf claw is extended, it becomes difficult to 
+ensure the same section of each wolf claw extends simultaneously, smoothly and securely. 
+As a consequence of not having any supports in the wolf claw, there will be oscillations 
+in each section, with the tip of the wolf claw oscillating the most. Reflecting on the objective 
+of this mechanism, this prototype is ineffectual as the structure of this wolf claw 
+would lead to the sections easily snapping. 
+
+Hence, we propose a different method, where each wolf claw is modelled as individual 
+blades as it would still fulfil the intended purpose and objective. 
+However, this approach would lead to the box containing the wolf claw mechanism being longer, 
+problems that arise from this include how this box is going to be stabilised to the arm as it 
+would be longer than a forearm of the average human.  
+
+\textbf{FIGURE :::: TODO}
+
+The three blades are connected by a square bar along the top of the blades, 
+perpendicular in the direction of the blades. These blades are not sharpened 
+as the purpose is to act as a cosplay prop but to fulfil the objective effectively, 
+these blades would have a sandpaper coating and be non-backdrivable. To allow this 
+non-backdrivable feature, a spring plunger is integrated at the side of the box, 
+locking the two side blades in position. In this mechanism we aim to make to make 
+the wolf claw retract semi-automatically, hence we modified the spring plungers 
+(see figure~\ref{fig:hand_skeleton}) so that they can retract by applying force to the handle. 
+
+\textbf{Transmission Mechanism Selection}
+
+The key feature of our design is sliding the wolf claws out, this achieved using a 
+combination of planetary gears as part as a simple gear train. Another approach for 
+the this would be using the structure of a compound gear train, let the two versions 
+be versions one and two respectively. Both methods start with rotary-to-rotary motion, 
+this is then converted from rotary to translational motion through the use of pulley and belt systems.  
+
+\textbf{Version I: Planetary Gear}
+
+This version provides a higher gear ratio with a 
+more compact and stable design but requires high precision in 
+laser cutting and 3D printing as several components mesh into the same gear.  
+
+\textbf{Version II: Compound Gear Train}
+
+This version is simpler to print and has a higher 
+flexibility in gear ratios, yet there is a lack of stability in the 
+blades as the centre blade drives the two side blades. 
+
+Therefore, we would use version I 
+
+\subsubsection{Version I: Planetary Gear}
+
+The light inextensible string would be connected to the ring gear of 
+the fixed carrier planetary gear. Both the fixed carrier gear and the 
+sun gear (output for the planetary gear) would be extended to a height 
+of \textbf{DATA NEEDED}, the fixed carrier gear would be fixed to the inside of top of the box. 
+The sun gear would mesh with another two gears, gears A1 and B1, where A1 and 
+B1 are identical, fixed to the bottom of the box by screws. This forms a simple 
+gear train, further increasing the overall gear ratio. 
+
+At the other end of the box, identical gears to A1 and B1 are fixed to the 
+floor parallel to gears A1 and B1, let us call them A2 and B2. By using 
+timing belts (shown in \textbf{COLOUR NEEDED}), two pulleys and belts systems are formed between 
+gears A1,2 and B1,2, allowing a higher efficiency with no slippage whilst dampening noise. 
+Challenges in this design being the timing belts being difficult to put together as the 
+timing belts are required to be flexible for our design.  When 3D printing each section 
+of the timing belts, removing the supports was an arduous task with low success rates, 
+hence we adapted the gears A1,2 and B1,2  as shown in figure \textbf{NOT SURE} to use the open timing 
+belts and timing pulleys in the innovation lab. The top section will allow the gears A1 
+and B1 to mesh properly with the sun gear, the bottom half would be glued into the timing 
+pulley, meaning that gears A2 and B2 would just be a timing pulley with a fixed rod through 
+the centre, fixed to the bottom of the box.  
+
+\textbf{FIGURE ::::: TODO labelled diagram }
+
+The two side blades would be fixed to these pulley and belt systems (A1,2 and B1,2) using 
+superglue on the end of the blade, with a centre blade connected to a third pulley and belt 
+system as shown in figure \textbf{NOT SURE}. The blades are connected to ensure all three blades slide out 
+simultaneously, and stability of the centre blade can be increased by integrating a third pulley 
+and belt system. This allows the motion of the centre blade to be parallel to the side blades 
+when the whole mechanism is moving or when there is a force applied to the tip of the blades. 
+When there is force applied on the blades, it may be impractical to hold the blades to the belt 
+only by superglue at the end section of the blade, hence screwing the blades to the belt would 
+make this mechanism more secure. Ensuring the open timing belts are tight would be challenging 
+as the glue requires some time to dry and the timing belts must be held together tightly during 
+this time, the difficulty in this being that it must align perfectly with the other end to ensure 
+perfectly horizontal motion of blades.  
+
+\textbf{FIGURE ::::::: TODO time against length of bade out }
+
+\subsubsection{Compound Gear Train}
+The compound gear train is dependent on the contact between gears, reflecting on the objective 
+of our mechanism, it is essential to ensure the gears mesh regardless of motion of mechanism.  
+
+Gear A will be connected to the floor by a screw, similar to gears A1,2 and B1,2 in version one, 
+this screw will ensure the gears are in a fixed position yet allow rotational movement to ensure 
+meshing between gears. The same procedure has been utilised for gears B and D, with gear C resting 
+on an upside-down “T” shaped support which is fixed to the top of the box. Gear C has been modified 
+to a similar design to gears A1 and B1, with the upper half glued into the timing pulley and the
+lower half meshing with gear D.  
+
+The pulley and belt system of this version would be supported by two “T” shaped supports, with 
+the end of the centre blade screwed to the side of the timing belt. In this version, the centre 
+blade provides the driving force to the two side blades. To increase the stability of the blades, 
+another two pulley and belt systems guides the side blades. The timing pulleys could be supported 
+by a vertical rod with two horizontal plates, as shown in figure \textbf{NOT SURE}, this support would be made 
+of three components. The first being a cylindrical dowel, the second and third components consisting 
+of a horizontal plate with a cylindrical dowel in the centre. The tip of this cylindrical centre 
+(for component 2) would be designed such that it fits the bottom of the cylindrical centre of component 3, 
+shown in \textbf{COLOUR NEEDED}. The difficulty of this involves glueing the supports vertical and parallel to the other pulley 
+and belt transmissions.  
+
+\textbf{FIGURE ::::::: TODO labelled diagram }
+
+\textbf{FIGURE ::::::: TODO time against length of blade out }
 
 
 \pagebreak
 
-% ======== SECTION III ========
-
-\section{Mathematical Modelling and Analysis}
+\section{Mathematical Modelling and Analysis}	%% ============================ SECTION III =================================
 \subsection{Fingers and Wrist Modelling}
 \textbf{Finger and Overhead String Movement}
 
@@ -277,11 +442,11 @@ In addition, there are 14 DOFs in hand exoskeleton.
 
 % ======== SECTION IV =========
 
-\section{Conclusion and Future Work}
+\section{Conclusion and Future Work}			%% ============================ SECTION IV ===================================
 
 \pagebreak
 
 \bibliographystyle{plain}
-\bibliography{references}
+\bibliography{refs}
 
 \end{document}
