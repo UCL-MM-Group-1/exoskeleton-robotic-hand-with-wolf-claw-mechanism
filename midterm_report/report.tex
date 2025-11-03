@@ -141,33 +141,33 @@ Details of the transmission process shown below:
 \subsection{Hand Exoskeleton Mechanisms}
 
 \subsubsection{Hand Biomechanics}
-The human hand comprises 19 bones and 14 joints 
-(excluding the carpal bones). 
+Most human hands have 19 bones and 14 joints\cite{heo2012current}, excluding the carpal bones.
 
-The exoskeleton design is based on the natural anatomy of 
-the human hand~(figure~\ref{fig:hand_skeleton}), particularly the MCP, PIP, and 
-DIP joints that ensure the finger can flex and extend.
+The design of the hand exoskeleton needs to be based on the natural anatomy of the 
+human hand~(figure~\ref{fig:hand_skeleton}). We have to focus on MCP, PIP, and 
+DIP joints, because they ensure the finger can flex and extend easily.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.4\textwidth]{imgs/bones_joints_of_hand.png}
-	\caption{bones and joints of a human hand}\label{fig:hand_skeleton}
+	\caption{bones and joints of a human hand\cite{heo2012current}}\label{fig:hand_skeleton}
 \end{figure}
 
-The finger joints mainly include:
+The finger joints include 3 types of joints majorly\cite{rosen2019wearableC8}:
 
-Metacarpophalangeal Joint (MCP): 
+Metacarpophalangeal Joint (MCP): \\
 Has 2 degrees of freedom (flexion/extension, abduction/adduction).
 
-Both Proximal Interphalangeal Joint (PIP) and Distal Interphalangeal Joint (DIP): 
+Proximal Interphalangeal Joint (PIP): \\
 Has 1 degree of freedom (flexion/extension).
 
-The Carpometacarpal Joint (CMC) of the thumb 
-is a saddle joint with 2 degrees of freedom, granting it greater flexibility.
+Distal Interphalangeal Joint (DIP): \\
+Has 1 degree of freedom (flexion/extension).
 
-In the resting posture, the MCP joint is flexed approximately 45°, 
-the PIP joint between 30°--45°, and the DIP joint between 10°--20°. 
-This data is crucial for defining the range of motion and ensuring safety in exoskeleton design.
+In the resting posture, the angle of MCP joint is approximately 45°, 
+whereas the PIP joint is between 30°--45°, and the DIP joint is between 10°--20°. 
+To define the range of motion and ensure safety in exoskeleton design, 
+it is essential to align our mechanism to the human anatomy. 
 
 \textbf{Wrist Structure Analysis}
 
@@ -175,27 +175,30 @@ The wrist has 2 degrees of freedom: flexion/extension and radial/ulnar deviation
 
 \subsubsection{Selection of Mechanism Type}
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \centering
-    \includegraphics[width=0.48\textwidth]{imgs/mechanism_types.png}
-    \caption{mechanism types}\label{fig:mechanism_types}
-\end{wrapfigure}
 
 Among the mechanisms illustrated in 
 Figure~\ref{fig:mechanism_types}, the direct matching of joint 
 centers (Figure~\ref{fig:mechanism_types}.a) was 
-selected for our design because it provides a structurally 
+selected for our design because it provides a  
 simple and compact solution without requiring additional 
 linkages or complex actuation. 
-This approach minimizes mechanical complexity, 
+Also, this approach minimises the mechanical complexity, 
 reduces system weight, and simplifies both fabrication and control.
 
-Furthermore, direct alignment of the exoskeleton joints with the 
-anatomical centers ensures high kinematic accuracy and reliability, 
-as no additional compensation for remote or compliant motion is necessary. 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.88\textwidth]{imgs/mechanism_types.png}
+    \caption{mechanism types\cite{heo2012current}\cite{rosen2019wearableC8}}\label{fig:mechanism_types}
+\end{figure}
+
+The exoskeleton joints directly aligned with 
+the anatomical centers, which ensures high 
+accuracy and reliability. This is because 
+no additional compensation for motion is necessary. 
 
 Therefore, the direct joint-center matching method offers the most 
-efficient and practical solution for this application.
+efficient and practical solution for this application. 
+We have chosen to take a similar approach
 
 \subsection{Wolf Claw Mechanism Comparison}
 \subsubsection{Version 1: Planetary Gear}
@@ -229,7 +232,7 @@ Figure~\ref{fig:mid_finger_extended} describes the details and data when finger 
 	\caption{mid-finger exoskeleton design}\label{fig:mid_finger}
 \end{figure}
 
-Total displacement of the string overhead by calculation:\cite{bryan}
+Total displacement of the string overhead by calculation:
 
 \begin{align*}
 	\Delta L             & = L_{DIP} + L_{PIP} + L_{MCP}, \quad \text{where}     \\
@@ -263,7 +266,7 @@ constraints of the narrow aperture space.
 
 \textbf{Conclusion}
 
-In the term of robotic hand exoskeleton, 
+In terms of a robotic hand exoskeleton, 
 there are totally $3 \times 4 + 3= 15$ links 
 and $3 \times 4 + 2 = 14$ joints in 3 fingers and a wrist.
 
