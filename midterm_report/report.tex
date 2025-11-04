@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{sfmath}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphics}
 \usepackage{graphicx}
 \usepackage{subfig}
@@ -71,10 +72,7 @@ This data highlights the significance of our mechanism,
 as it increases the safety of the victim when physically approached by the stalker. 
 However, this mechanism would be considered a weapon with the intention of using 
 it for self-defence, which violates the Criminal Justice and Immigration Act 2008\cite{CriminalJustice2008}. 
-Hence, to legalise our mechanism, we modified the dangerous component (the three wolf claws) 
-into a blunt claw-shaped design made of PLA materials. With the aim of this mechanism serving 
-as a cosplay prop and the objective of helping with self-defence- the self-defence aspect will 
-be further examined in section 2.3, wolf claw mechanism comparison. 
+Thus, to legalise our mechanism, we modified the dangerous component (the three wolf claws) into a blunt claw-shaped design made of PLA materials. With the aim of this mechanism serving as a cosplay prop and the objective of helping with self-defence, this aspect will be further examined in section, wolf claw mechanism comparison.
 
 \subsection{Similar Mechanisms}
 
@@ -249,14 +247,14 @@ injured more easily.
 
 \begin{figure}[htbp]
 	\centering
-	\subfloat[bones and joints of a human hand\label{fig:mid_with_connector}]{
+	\subfloat[configuration of how component connects fingers to palm\label{fig:mid_with_connector}]{
 		\includegraphics[width=0.65\textwidth]{imgs/mid_with_connector.PNG}
 	}
 	\hfill
-	\subfloat[model of human hand\label{fig:fig_connector}]{
+	\subfloat[component allowing 2 DOFs in MCP join\label{fig:fig_connector}]{
 		\includegraphics[width=0.3\textwidth]{imgs/fig_connector.PNG}
 	}
-	\caption{Human Hand}\label{fig:connecter}
+	\caption{finger with linkage component}\label{fig:connecter}
 \end{figure}
 
 The direct matching of joints (figure~\ref{fig:mechanism_types}) provides a structurally 
@@ -294,13 +292,13 @@ Consider a wolf claw made of multiple sections:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{imgs/belt_and_claw.PNG}
-    \caption{wolf claw blade movements section}\label{fig:wolf_belt_claw}
+    \caption{belt-pulley assembly with simple secondary gear train}\label{fig:wolf_belt_claw}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.70\textwidth]{imgs/blade3.PNG}
-    \caption{3 blades}\label{fig:blade3}
+    \caption{blade assembly}\label{fig:blade3}
 \end{figure}
 
 For this prototype the whole mechanism would be more portable due to these retractable features. 
@@ -443,7 +441,10 @@ to the other pulley and belt transmissions.
 \subsection{Fingers and Wrist Modelling}
 \textbf{Finger and Overhead String Movement}
 
-The linear movement of the string that is deployed over the finger is created by the finger's flexion.
+The light, inextensible string is tied to the loop on the DIP joint, 
+and is guided through the other loops, with the other end connected to the 
+ring gear of the planetary gear. 
+The linear movement of the string is created by the finger’s flexion, see figure 3. 
 
 Figure~\ref{fig:mid_finger} has two sub-figures, 
 Figure~\ref{fig:mid_finger_curved} describes the details and data when finger curved,
@@ -482,23 +483,24 @@ Total displacement of the string overhead by calculation:
 
 \textbf{Wrist Movement}
 
-In hand exoskeletons, the wrist section is relatively 
-complex due to its two degrees of freedom (DOFs) 
-for upward-downward and left-right movements, 
-with their rotation centers almost coinciding. 
-This poses a challenge for the design of the mechanical 
-structure. We have designed a special mechanism, functionally 
-similar to a universal joint, to serve as the exoskeleton 
-for the wrist, as illustrated in the figure~\ref{fig:wrist_demo}.
+The two degrees of freedom in our wrist are 
+flexion/extension and radial/ulnar deviation, 
+with the two rotational centre almost coinciding, 
+it becomes difficult to design the mechanical 
+structure of the exoskeleton. Thus, we designed 
+a mechanism that is functionally similar to a 
+universal joint, see figure 4. The palm is 
+represented as an oval, and the linkage structure 
+connecting the fingers to the palm allows 
+the 2 DOF in the MCP joint.  
 
-The palm is represented by an oval in the diagram, 
-and the linkage structure connecting the palm and 
-fingers still requires careful design due to the 
-constraints of the narrow aperture space.
+For the robotic hand exoskeleton, there are 
+a total of 15 links and 13 joints, giving 
+rise to 22 DOFs in the hand exoskeleton.  
 
 \begin{figure}
 	\centering
-	\includegraphics[width = 0.8\textwidth]{imgs/wrist_demo.PNG}
+	\includegraphics[width = 0.7\textwidth]{imgs/wrist_demo.PNG}
 	\caption{demostration of wrist}\label{fig:wrist_demo}
 \end{figure}
 
@@ -510,9 +512,113 @@ and $3 \times 4 + 2 = 14$ joints in 3 fingers and a wrist.
 
 In addition, there are 14 DOFs in hand exoskeleton.
 
+\pagebreak
+\subsection{Wolf Claw Mechanism Version 1: Planetary Gear}
 
-\subsection{Wolf Claw Mechanism \- Version 1: Planetary Gear}
-\subsection{Wolf Claw Mechanism \- Version 2: Compound Gear Train}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{imgs/a1b1.PNG}
+	\caption{gear A1 and B1}\label{fig:planetary_box_a1b1}
+\end{figure}
+
+A schematic diagram of version one's planetary gear is shown in Figure~\ref{fig:planetary_box}. 
+The planetary gear is a fixed carrier gear, with the carrier (illustrated in dark blue) 
+fixed to the upper inner surface of the box using three screws. The sun gear is extended 
+downwards to mesh with two identical spur gears A1 and B1, see figure~\ref{fig:planetary_box_a1b1}, secured to the 
+base of the housing using screws, forming a simple secondary gear train. To convert this 
+rotary motion into linear motion, two identical gears A2 and B2, timing pulleys, are screwed 
+to the bottom of the box, parallel to A1 and B1 (the screws are not tight, the timing pulleys 
+and gears A1 and B1 can still rotate about its centre of rotation, the screw). The end of gears 
+A1 and B1 are glued into timing pulleys, timing belts connect A1--A2 and B1--B2, forming two 
+pulley and belt systems, enabling low-noise transmission without slippage, see Figure~\ref{fig:wolf_belt_claw}.  
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{imgs/plt_box.PNG}
+	\caption{Kinematic scheme of the planetary gear mechanism}\label{fig:planetary_box}
+\end{figure}
+
+The design parameters of the planetary gear system are summarized as follows. The sun gear has $18$ teeth, the inner and outer sides of the compound planet gear have $42$ and $15$ teeth respectively, and the ring gear has $75$ teeth, satisfying the concentric condition:
+
+\begin{equation*}
+	N_r = N_s + N_\text{p-in} + N_\text{}{p-out} = {75}\\
+\end{equation*}
+
+Each of the two secondary gears A1 and B1 has $36$ teeth, and three identical compound planet gears are evenly distributed at 120° intervals to maintain torque balance and provide structural stability. 
+
+The assembly conditions are fulfilled by the following expression: 
+
+\begin{equation*}
+	\frac{N_s N_\text{p-out} + N_r N_\text{p-in}}{3} = 1140 \in \mathbb{Z}
+\end{equation*}
+
+The side blades are fixed to the sides of the belt system using two screws near the end to prevent detachment. The three blades are connected with the two side blades providing a driving force to the centre blade, this centre blade is connected to a third pulley and belt system to increase stability when the blades slide simultaneously. Belt tensioning is required to maintain a fully horizontal motion for blades. 
+
+For a fixed carried planetary gear, the kinematic relationship between the angular velocities of the ring and sun gears can be expressed using Willis equation: 
+
+\begin{align}
+	\frac{\omega_r - \omega_c}{\omega_s - \omega_c} &= 
+	- \frac{N_s}{N_r}\text{, since}\ \omega_c = 0 \\
+	\Rightarrow
+	\frac{\omega_r}{\omega_s} &= - \frac{N_r}{N_s}
+	\label{eq:omega_N}
+\end{align}
+
+The transmission ratio of the compound planetary gear system is then given by: 
+
+\begin{equation}
+	i_\text{planetary} = 1 + \frac{N_r N_\text{p-in}}{N_s N_\text{p-out}}
+	= 1 + \frac{75 \times 42}{18 \times 15} \approx 12.7
+	\label{eq:gear_ratio}
+\end{equation}
+
+After the planetary stage, the sun gear is connected with another gear (30 teeth) that directly drives the two identical spur gears A1 and B1 (36 teeth each). The secondary gear ratio is therefore: 
+
+\begin{equation*}
+	i_\text{secondary} = \frac{Z_{A1}}{N_s} = \frac{36}{30} = 1.2
+\end{equation*}
+
+In the belt transmission stage, the linear velocity of the belt is related to the angular velocity of the pulleys by: 
+
+\begin{equation*}
+	\begin{cases}
+        v_{\text{belt}} = r \, \omega_{\text{pulley}}, \\
+        x = r \, \theta_{\text{pulley}}
+    \end{cases}
+\end{equation*}
+
+Since both pulleys have equal radii and the displacements of the left, centre, and right blades are identical: 
+
+\begin{equation*}
+	x_L = x_C = x_R = r \theta
+\end{equation*}
+
+The overall transmission ratio of the complete mechanism can thus be expressed as: 
+
+\begin{equation*}
+	N_{\text{total}} = N_{\text{planetary}} \times T_{\text{secondary}} \times i_{\text{belt}} = 12.67 \times 1.2 \times 1.0 = 15.2
+\end{equation*}
+
+Therefore, the total theoretical transmission ratio of the system is approximately $i_\text{total} = 15.2 : 1$, providing significant torque amplification and smooth synchronised blade extension. The general expression for the total transmission ratio can be written as: 
+
+\begin{equation*}
+	i_{\text{total}} = \left( 1 + \frac{N_r N_{p-\text{in}}}{N_s N_{p-\text{out}}}\right) \times \frac{Z_{A1}}{N_s} \times \frac{r_{A2}}{r_{A1}}
+\end{equation*}
+
+
+Figure 3 illustrates the relationship between the input ring gear angle, \(\theta_r\), and the output sun gear angle, \(\theta_s\), derived from equations~\eqref{eq:omega_N}~\eqref{eq:gear_ratio}. The results demonstrate a linear inverse relationship between the two variables, with a gradient of \(-4.17\), indicating opposite rotation directions of the input and output components and constant total transmission ratio throughout motion.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 0.9\textwidth]{imgs/angles_relationship.png}
+	\caption{input and output angles relationship }\label{fig:angle_relationship}
+\end{figure}
+
+The mathematical model satisfies all design requirements. The planetary gear stage provides a reduction ratio of approximately $12.7 : 1$, the secondary gear stage contributes an additional $1.2 : 1$ ratio, and the belt stage maintains a $1: 1$ transmission. The total reduction ratio of $15.2 : 1$ enables high torque output while ensuring synchronized linear motion of the blades. 
+
+
+
+\subsection{Wolf Claw Mechanism Version 2: Compound Gear Train}
 
 % ======== SECTION IV =========
 
