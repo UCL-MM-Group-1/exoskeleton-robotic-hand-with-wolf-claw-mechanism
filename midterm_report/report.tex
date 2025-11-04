@@ -451,9 +451,9 @@ Let $S(t)$ be the normalized displacement of the rope, the fraction of total mot
 
 \begin{equation*}
 	\begin{array}{ll}
-		\ddot{S}(0) = 0, & \ddot{S}(T) = 1 \\
+		\ddot{S}(0) = 0, & \ddot{S}(T) = 0 \\
 		\dot{S}(0) = 0,  & \dot{S}(T) = 0  \\
-		S(0) = 0,        & S(T) = 0
+		S(0) = 0,        & S(T) = 1
 	\end{array}
 \end{equation*}
 
@@ -544,7 +544,7 @@ The Figure~\ref{fig:relation_input_output_angles} illustrates the linear relatio
 
 \section{Conclusion and Future Work}			%% ============================ SECTION IV 
 
-Our design proposes a lightweight, passive mechanism that relies on the user' intuitive actions. The DOFs of the exoskeleton hand closely matches the DOFs of a human hand, excluding the unnecessary rotations (which would lead to a lower efficiency). With the two wolf claw mechanisms involving rotary-to-rotary transmission and rotary to translational transmission.
+Our design proposes a lightweight, passive mechanism that relies on the user's intuitive actions. The DOFs of the exoskeleton hand closely matches the DOFs of a human hand, excluding the unnecessary rotations (which would lead to a lower efficiency). With the two wolf claw mechanisms involving rotary-to-rotary transmission and rotary to translational transmission.
 
 Moving forward, experiments would be run to investigate what would be considered a “safe” distance, average reaction time and speed of waving your arm. We will then adjust the gear ratios for our first prototype accordingly and integrate damping for shock absorption into this apparatus, whilst minimising the size of the housing for the wolf claw mechanism. During this process, we will be focussing on implementing the non-backdrivable feature throughout the whole mechanism as our first prototype only includes this in the spring plungers at the side blades. Though we could design the open timing belt such that it operates as a ratchet and connect a pawl to the side of the box using springs, the manufacturing of the ratchet would be troublesome as each section would have to be 3D printed individually, and the removal of these supports (from 3D printing individual sections) would be toil.
 
@@ -554,3 +554,4 @@ Moving forward, experiments would be run to investigate what would be considered
 \bibliography{refs}
 
 \end{document}
+
