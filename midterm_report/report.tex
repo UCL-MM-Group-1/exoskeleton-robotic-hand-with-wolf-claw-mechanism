@@ -260,8 +260,14 @@ Consider a wolf claw made of multiple sections:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.88\textwidth]{imgs/belt_and_claw.PNG}
+    \includegraphics[width=0.95\textwidth]{imgs/belt_and_claw.PNG}
     \caption{wolf claw blade movements section}\label{fig:wolf_belt_claw}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.70\textwidth]{imgs/blade3.PNG}
+    \caption{3 blades}\label{fig:blade3}
 \end{figure}
 
 For this prototype the whole mechanism would be more portable due to these retractable features. 
@@ -283,15 +289,7 @@ However, this approach would lead to the box containing the wolf claw mechanism 
 problems that arise from this include how this box is going to be stabilised to the arm as it 
 would be longer than a forearm of the average human.  
 
-\pagebreak
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.88\textwidth]{imgs/blade3.PNG}
-    \caption{3 blades}\label{fig:blade3}
-\end{figure}
-
-The three blades are connected by a square bar along the top of the blades, 
+The three blades (Figure~\ref{fig:blade3}) are connected by a square bar along the top of the blades, 
 perpendicular in the direction of the blades. These blades are not sharpened 
 as the purpose is to act as a cosplay prop but to fulfil the objective effectively, 
 these blades would have a sandpaper coating and be non-backdrivable. To allow this 
@@ -320,7 +318,7 @@ This version is simpler to print and has a higher
 flexibility in gear ratios, yet there is a lack of stability in the 
 blades as the centre blade drives the two side blades. 
 
-Therefore, we would use version I 
+Therefore, we would use version 1 for our first prototype.
 
 \subsubsection{Version I:\ Planetary Gear}
 
@@ -335,18 +333,25 @@ which are identical and are fixed to the bottom of the box by screws.
 This forms a simple 
 gear train, further increasing the overall gear ratio. 
 
-At the other end of the box, identical gears to A1 and B1
-are fixed to the floor parallel to gears A1 and B1, let us call them A2 and B2(shown Figure~\ref{fig:wolf_belt_claw}).
-By using timing belts, two pulleys and belts systems are formed between 
-gears A1,2 and B1,2, allowing a higher efficiency with no slippage whilst dampening noise. 
-Challenges in this design being the timing belts being difficult to put together as the 
-timing belts (labelled in Figure~\ref{fig:wolf_belt_claw}) are required to be flexible for our design.  When 3D printing each section 
-of the timing belts, removing the supports was an arduous task with low success rates, 
-hence we adapted the gears A1,2 and B1,2 (shown Figure~\ref{fig:wolf_belt_claw}) to use the open timing 
-belts and timing pulleys in the innovation lab. The top section will allow the gears A1 
-and B1 to mesh properly with the sun gear, the bottom half would be glued into the timing 
-pulley, meaning that gears A2 and B2 would just be a timing pulley with a fixed rod through 
-the centre, fixed to the bottom of the box.  
+At the other end of the box, identical gears to A1 and B1 are fixed to the floor parallel 
+to gears A1 and B1, let us call them A2 and B2. By using timing belts 
+(shown in Figure~\ref{fig:wolf_belt_claw}), 
+two pulleys and belts systems are formed between gears A1,2 and B1,2, allowing a higher 
+efficiency with no slippage whilst dampening noise. Challenges in this design being the 
+timing belts being difficult to put together as the timing belts are required to be flexible 
+for our design.  When 3D printing each section of the timing belts, removing the supports 
+was an arduous task with low success rates, hence we adapted the gears A1,2 and B1,2  
+as shown in figure~\ref{fig:wolf_belt_claw} to use the open timing belts and timing pulleys in the 
+innovation lab. The top section will allow the gears A1 and B1 to mesh properly with 
+the sun gear, the bottom half would be glued into the timing pulley, meaning that 
+gears A2 and B2 would just be a timing pulley with a fixed rod through the centre, 
+fixed to the bottom of the box.  
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.70\textwidth]{imgs/planetray_vel.png}
+    \caption{Linear velocity of input and blade out}\label{fig:planetray_vel}
+\end{figure}
 
 The two side blades would be fixed to these pulley and belt systems (A1,2 and B1,2) using 
 superglue on the end of the blade, with a centre blade connected to a third pulley and belt 
@@ -361,7 +366,6 @@ as the glue requires some time to dry and the timing belts must be held together
 this time, the difficulty in this being that it must align perfectly with the other end to ensure 
 perfectly horizontal motion of blades.  
 
-\textbf{FIGURE::::::: TODO time against length of bade out }
 
 \pagebreak
 
@@ -388,17 +392,15 @@ on an upside-down “T” shaped support which is fixed to the top of the box. G
 to a similar design to gears A1 and B1, with the upper half glued into the timing pulley and the
 lower half meshing with gear D.  
 
-The pulley and belt system of this version would be supported by two “T” shaped supports, with 
-the end of the centre blade screwed to the side of the timing belt. In this version, the centre 
-blade provides the driving force to the two side blades. To increase the stability of the blades, 
-another two pulley and belt systems guides the side blades. The timing pulleys could be supported 
-by a vertical rod with two horizontal plates, as shown in figure~\ref{fig:wolf_belt_claw}, this support would be made 
-of three components. The first being a cylindrical dowel, the second and third components consisting 
-of a horizontal plate with a cylindrical dowel in the centre. The tip of this cylindrical centre 
-(for component 2) would be designed such that it fits the bottom of the cylindrical centre of component 3, 
-shown in light blue~\ref{fig:gear_comp_mech}. The difficulty of this involves glueing the supports vertical and parallel to the other pulley 
-and belt transmissions.  
-
+The pulley and belt system of this version would be supported by two “T” shaped supports, 
+with the end of the centre blade screwed to the side of the timing belt. In this version, 
+the centre blade provides the driving force to the two side blades. To increase 
+the stability of the blades, another two pulley and belt systems guides the side blades. 
+The timing pulleys could be supported by a vertical rod with two horizontal plates, 
+as shown in figure~\ref{fig:gear_comp_mech}, this support would be made of three components, 
+these three components ensure that the supports are fully vertical. The difficulty of this 
+involves glueing the supports vertically (in the box) and parallel 
+to the other pulley and belt transmissions.  
 
 
 
