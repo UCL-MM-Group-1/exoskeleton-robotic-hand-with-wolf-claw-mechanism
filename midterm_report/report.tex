@@ -63,67 +63,32 @@
 
 
 
-\section{Project Objectives and Description}	%% ============================ SECTION I ===================================
+\section{Project Objectives and Description}	%% ============================ SECTION I 
 
-We examined the percentage of people who were victims of stalking in the last year, 
-with 19.9\% of women since the age of 16 suffering from this abuse, 
-of which 8.05\% were single women~\cite{ons_stalking_2025}. 
-This data highlights the significance of our mechanism, 
-as it increases the safety of the victim when physically approached by the stalker. 
-However, this mechanism would be considered a weapon with the intention of using 
-it for self-defence, which violates the Criminal Justice and Immigration Act 2008\cite{CriminalJustice2008}. 
-Thus, to legalise our mechanism, we modified the dangerous component (the three wolf claws) into a blunt claw-shaped design made of PLA materials. With the aim of this mechanism serving as a cosplay prop and the objective of helping with self-defence, this aspect will be further examined in section, wolf claw mechanism comparison.
+We examined the percentage of people who were victims of stalking in the last year, with $19.9\%$ of women since the age of $16$ suffering from this abuse, of which $8.05\%$ (of total victims) were single women~\cite{ons_stalking_2025}. This data highlights the significance of our mechanism, as it enhances safety of the victim when physically approached by the stalker. However, this mechanism would be considered a weapon with the intention of using it for self-defence, which violates the Criminal Justice and Immigration Act 2008~\cite{CriminalJustice2008}. Thus, to legalise our mechanism, we modified the dangerous component (the three wolf claws) into a blunt claw-shaped design made of PLA materials. With the aim of this mechanism serving as a cosplay prop and the objective of helping with self-defence, this aspect will be further examined in section\!~\ref{sec:sub-Wolf_Claw_Mechanism}, wolf claw mechanism comparison.
 
 \subsection{Similar Mechanisms}
 
-There are many applications of exoskeleton robotic hands in 
-diverse fields (e.g.\ rehabilitation medicine) in which most 
-of these exoskeleton hands are powered. Our mechanism is purely 
-passive as it allows a lightweight approach and only relies on 
-the user's instinctive movements. Powered exoskeleton robotic 
-hands tend to have higher demands regarding control schemes 
-and mechanical design (involving actuators).  
+There are many applications of exoskeleton robotic hands in diverse fields (e.g.\ rehabilitation medicine) in which most of these exoskeleton hands are powered. Powered exoskeleton robotic hands tend to have higher demands regarding control schemes and mechanical design (involving actuators) whereas our mechanism allows a lightweight approach and only relies on the user's instinctive movements.
 
-The robotic hand should have the same DOFs as a human, yet 
-given the compact size of the hand, it becomes impractical to 
-actively control every joint~\cite{rosen2019wearableC8} when the complexity of the control 
-algorithms increases with the DOFs in a powered exoskeleton 
-robotic hand. 
-Thus, some motions are left passive (passive DOF), 
-power and control signals of the hand must also be 
-routed such that it does not interfere with motion of 
-arm, where we will be placing the wolf claw mechanism. 
-Taking the increased mass and inertia into consideration, 
-we have decided to design our mechanism in a purely mechanical 
-way since there is no reliance on power source and is less 
-susceptible to technical malfunctions.
+The robotic hand should have the same DOFs as a human, yet given the compact size of the hand, it becomes impractical to actively control every joint~\cite{rosen2019wearableC8} when the complexity of the control algorithms increases with the DOFs in a powered exoskeleton robotic hand. Thus, some motions are left passive (passive DOF), power and control signals of the hand must also be routed such that it does not interfere with motion of arm, where we will be placing the wolf claw mechanism. Taking the increased mass and inertia into consideration, we have decided to design our mechanism in a purely mechanical (passive) way since there is no reliance on power source and is less susceptible to technical malfunctions. 
 
-A 1 DOF kinematic architecture~\cite{rosen2019wearableC9} has been used for the DIP 
-(distal Interphalangeal joint) and PIP (proximal Interphalangeal joint) 
-as it allows precise replication of the natural grasping motion.
+A 1 DOF kinematic architecture~\cite{rosen2019wearableC9} has been used for the DIP (distal Interphalangeal joint) and PIP (proximal Interphalangeal joint) as it enables a precise replication of the natural grasping motion. 
 
 \subsection{Industrial Applications} 
 
-The exoskeleton robotic hand of our mechanism is purely passive, 
-providing support for the fingers and hand during tasks that require 
-a sustained grip on tools for long periods. By redistributing the physical 
-load from the fingers to the palm exoskeleton (connected to the wrist and arm) 
-and supporting proper posture, the user is less likely to suffer from overuse injuries. 
-This mechanism could be used for repetitive tasks, such as manual labour in construction, 
-or it could be used in further designing or developing powered exoskeleton hands.
+The exoskeleton robotic hand of our mechanism is purely passive, providing support for the fingers and hand during tasks that require a sustained grip on tools for long periods. By redistributing the physical load from the fingers to the palm exoskeleton (connected to the wrist and arm) and supporting proper posture, the user is less likely to suffer from overuse injuries. This mechanism could be used for repetitive tasks, such as manual labour in construction, and it is applicable in further designing or developing powered exoskeleton hands.
 
 \pagebreak
 
-\section{Mechanical and Mechanism Analysis}     %% ============================ SECTION II ==================================
+\section{Mechanical and Mechanism Analysis}     %% ============================ SECTION II 
 
 \subsection{Drive Method and Transmission}
-This robotic hand exoskeleton uses an acceleration-based machinery system, 
-amplifying the movements of the finger.  
+This robotic hand exoskeleton uses an acceleration-based machinery system, amplifying the movements of the finger. 
 
-This is achieved using a planetary gear mechanism connected to a string 
-transmission and a pulley and belt system.  
+This is achieved using a planetary gear mechanism connected to a string transmission and a pulley and belt system. 
 
-Details of the transmission process shown below: 
+Details of the transmission process shown below:
 
 \begin{center}
 	\begin{tikzpicture}[scale=0.8]
@@ -184,14 +149,7 @@ Details of the transmission process shown below:
 \subsection{Hand Exoskeleton Mechanisms Comparison}
 
 \subsubsection{Hand Biomechanics}
-The exoskeleton design is based on the anatomy of a hand (figure~\ref{fig:hand_label}), 
-consisting of 19 bones and 14 joints~\cite{ons_stalking_2025}, excluding the carpal bones. The 
-exclusion of the carpal bones (eight small bones in total) limits the 
-extent the user’s hand can bend whilst wearing this exoskeleton hand, 
-this was deliberately chosen based on multiple factors such as the 
-increasing mass and inertia of the exoskeleton, the noise generated 
-from the movement of fingers and the limited space to securely link 
-the carpal bones whilst not affecting the overall movement of adjacent fingers.  
+The exoskeleton design is based on the anatomy of a hand (Figure~\ref{fig:hand_label}), consisting of $19$ bones and $14$ joints~\cite{ons_stalking_2025}s, excluding the carpal bones. The exclusion of the carpal bones (eight small bones in total) limits the extent the user's hand can bend whilst wearing this exoskeleton hand, this was deliberately chosen based on multiple factors such as the increasing mass and inertia of the exoskeleton, the noise generated from the movement of fingers and the limited space to securely link the carpal bones whilst not affecting the overall movement of adjacent fingers. 
 
 \begin{figure}[htbp]
 	\centering
@@ -214,19 +172,9 @@ Distal Interphalangeal joint (\textbf{DIP}) and proximal Interphalangeal joint (
 1DOF (flexion/extension), this is a 1 DOF kinematic architecture  
 
 Carpometacarpal joint (\textbf{CMC}): \\
-2 DOF (flexion/extension, abduction/adduction), a saddle joint, 
-allowing circumduction and opposition movements. There is a third 
-degree of freedom in the thumb that enables axial rotation/opposition 
-which we have not included as it is unnecessary for the aim and 
-objective of our mechanism, increasing the mechanical complexity, mass and inertia. 
+2 DOF (flexion/extension, abduction/adduction), a saddle joint, allowing circumduction and opposition movements. There is a third degree of freedom in the thumb that enables axial rotation/opposition which we have not included as it is unnecessary for the aim and objective of our mechanism, increasing the mechanical complexity, mass and inertia. 
 
-The resting position for these joints is slight flexion, 
-the exoskeleton hand must also be at this position when 
-at rest to prevent joint stiffness and contractures and 
-increases joint laxity, which is ideal for immobilisation 
-and rehabilitation. In the resting position~\cite{heo2012current},
-the MCP joint is in 35°--45° of flexion, PIP joint being 30°--45°, 
-DIP joint: 10°--20°.  
+The resting position for these joints is slight flexion, the exoskeleton hand must also be at this position when at rest to prevent joint stiffness and contractures and increases joint laxity, which is ideal for immobilisation and rehabilitation. In the resting position~\cite{heo2012current},the MCP joint is in $35\deg \to 45\deg$ of flexion, PIP joint being $30\deg \to 45\deg$, DIP joint: $10\deg \to 20\deg$.
 
 \textbf{Wrist Structure Analysis}
 
@@ -257,34 +205,15 @@ injured more easily.
 	\caption{finger with linkage component}\label{fig:connecter}
 \end{figure}
 
-The direct matching of joints (figure~\ref{fig:mechanism_types}) provides a structurally 
-simple and compact solution, removing unnecessary components 
-including complex actuation and additional linkages. 
-This arrangement minimises mechanical complexity and simplifies 
-fabrication and control, taking inspiration from this design, 
-we have adapted this design to allow 2 DOFs for the MCP joint. 
-This is achieved by connecting part of the MCP joint with another 
-component using a rod, with an identical component being linked 
-to the palm exoskeleton (see figure~\ref{fig:connecter}).       
+The direct matching of joints (Figure 2a) provides a structurally simple and compact solution, removing unnecessary components including complex actuation and additional linkages. This arrangement minimises mechanical complexity and simplifies fabrication and control, taking inspiration from this design, we have adapted this design to allow 2 DOFs for the MCP joint. This is achieved by connecting part of the MCP joint with another component using a rod, with an identical component being linked to the palm exoskeleton (see figure~\ref{fig:connecter}). 
 
-For the objective to be executed safely, a physical stopper 
-would be placed on both sides of the wrist exoskeleton to 
-prevent the hand from bending backwards. The fingers are 
-also at risk of bending backwards, hence, increasing the 
-thickness of the palm exoskeleton and creating indentations 
-would decrease the strain on the fingers by distributing 
-the force over the volume of the indentations.  
+For the objective to be executed safely, a physical stopper would be placed on both sides of the wrist exoskeleton to prevent the hand from bending backwards. The fingers are also at risk of bending backwards, hence, increasing the thickness of the palm exoskeleton and creating indentations would decrease the strain on the fingers by distributing the force over the volume of the indentations.
 
-To further reduce this strain, a layer of rubber 
-(or any material with a high friction coefficient) 
-could be added to the tip of the fingers and the 
-indentations in the palm. Consequently, we must 
-consider whether the user would be able to clench 
-their first quickly enough in a life-threatening situation. 
+To further reduce this strain, a layer of rubber (or any material with a high friction coefficient) could be added to the tip of the fingers and the indentations in the palm. Consequently, we must consider whether the user would be able to clench their first quickly enough in a life-threatening situation.
 
 \pagebreak
 
-\subsection{Wolf Claw Mechanism}
+\subsection{Wolf Claw Mechanism}\label{sec:sub-Wolf_Claw_Mechanism}
 \textbf{Design of wolf claw}
 
 Consider a wolf claw made of multiple sections:  
@@ -301,82 +230,33 @@ Consider a wolf claw made of multiple sections:
     \caption{blade assembly}\label{fig:blade3}
 \end{figure}
 
-For this prototype the whole mechanism would be more portable due to these retractable features. 
-For these retractable features to be implemented, the inner structure of each section of the wolf 
-claw would be hollow, with only the tip of the claw being solid.  
+For this prototype the whole mechanism would be more portable due to the retractable features. For these retractable features to be implemented, the inner structure of each section of the wolf claw would be hollow, with only the tip of the claw being solid. 
 
-The main challenges in this include how each section is going to connect as the number of 
-sections increase, thus each section becomes thinner and the room for connection between 
-adjacent links being reduced. When this wolf claw is extended, it becomes difficult to 
-ensure the same section of each wolf claw extends simultaneously, smoothly and securely. 
-As a consequence of not having any supports in the wolf claw, there will be oscillations 
-in each section, with the tip of the wolf claw oscillating the most. Reflecting on the objective 
-of this mechanism, this prototype is ineffectual as the structure of this wolf claw 
-would lead to the sections easily snapping. 
+The main challenges in this include how each section is going to connect as the number of sections increase, thus each section becomes thinner and the room for connection between adjacent links being reduced. When this wolf claw is extended, it becomes difficult to ensure the same section of each wolf claw extends simultaneously, smoothly and securely. As a consequence of not having any supports in the wolf claw, there will be oscillations in each section, with the tip of the wolf claw oscillating the most. Reflecting on the objective of this mechanism, this prototype is ineffectual as the structure of this wolf claw would lead to the sections easily snapping.
 
-Hence, we propose a different method, where each wolf claw is modelled as individual 
-blades as it would still fulfil the intended purpose and objective. 
-However, this approach would lead to the box containing the wolf claw mechanism being longer, 
-problems that arise from this include how this box is going to be stabilised to the arm as it 
-would be longer than a forearm of the average human.  
+Therefore, we propose a different method, where each wolf claw is modelled as individual blades as it would still fulfil the intended purpose and objective. However, this approach would lead to the box containing the wolf claw mechanism being longer, problems that arise from this include how this housing is going to be stabilised to the arm as it would be longer than a forearm of the average human. 
 
-The three blades (Figure~\ref{fig:blade3}) are connected by a square bar along the top of the blades, 
-perpendicular in the direction of the blades. These blades are not sharpened 
-as the purpose is to act as a cosplay prop but to fulfil the objective effectively, 
-these blades would have a sandpaper coating and be non-backdrivable. To allow this 
-non-backdrivable feature, a spring plunger is integrated at the side of the box, 
-locking the two side blades in position. In this mechanism we aim to make to make 
-the wolf claw retract semi-automatically, hence we modified the spring plungers 
-(see figure~\ref{fig:wolf_belt_claw}) so that they can retract by applying force to the handle. 
+The three blades (Figure~\ref{fig:blade3}) are connected by drilling two holes near the end of the blade and inserting two rods to increase stability, perpendicular to the direction of the blades. These blades are not sharpened as the purpose is to act as a cosplay prop, but to fulfil the objective effectively, these blades would have a sandpaper coating and be non-backdrivable. To include this non-backdrivable feature, two spring plungers are integrated at the side of the box (two for redundancy), locking the two side blades in position. In this mechanism we aim to make to make the wolf claw retract semi-automatically, hence we modified the spring plungers (see Figure~\ref{fig:wolf_belt_claw}) so that they can retract by applying force to the handle and integrated a spring connecting a fixed section of the timing belt to the inner side of the box.
 
 \textbf{Transmission Mechanism Selection}
 
-The key feature of our design is sliding the wolf claws out, this achieved using a 
-combination of planetary gears as part as a simple gear train. Another approach for 
-the this would be using the structure of a compound gear train, let the two versions 
-be versions one and two respectively. Both methods start with rotary-to-rotary motion, 
-this is then converted from rotary to translational motion through the use of pulley and belt systems.  
+The key feature of our design is sliding the wolf claws out, this achieved using a combination of compound planetary gear as part as a simple secondary gear train. Another approach for the this would be using the structure of a compound gear train, let the two versions be versions one and two respectively. Both methods start with rotary-to-rotary motion, this is then converted from rotary to translational motion through the use of pulley and belt systems. 
 
 \textbf{Version I:\ Planetary Gear}
 
-This version provides a higher gear ratio with a 
-more compact and stable design but requires high precision in 
-laser cutting and 3D printing as several components mesh into the same gear.  
+This version provides a higher gear ratio with a more compact and stable design but requires high precision in laser cutting and 3D printing as several components mesh into the same gear.   
 
 \textbf{Version II:\ Compound Gear Train}
 
-This version is simpler to print and has a higher 
-flexibility in gear ratios, yet there is a lack of stability in the 
-blades as the centre blade drives the two side blades. 
+This version is simpler to print and has a higher flexibility in gear ratios, yet there is a lack of stability in the blades as the centre blade drives the two side blades.
 
 Therefore, we would use version 1 for our first prototype.
 
 \subsubsection{Version I:\ Planetary Gear}
 
-The light inextensible string would be connected to the ring gear of 
-the fixed carrier planetary gear. Both the fixed carrier gear and the 
-sun gear would be extended to a height 
-of $7$~mm, the fixed carrier gear would be 
-fixed to the inside of top of the box. 
-The sun gear will rotate together with another gear and mesh with 
-gears A1 and B1 (shown Figure~\ref{fig:wolf_belt_claw}), 
-which are identical and are fixed to the bottom of the box by screws.
-This forms a simple 
-gear train, further increasing the overall gear ratio. 
+The light inextensible string would be connected to the ring gear of the fixed carrier planetary gear. The fixed carrier gear would be fixed to the top of the box using screws, this enables the planetary gear to hang from above. The sun gear is connected to another gear that would mesh with two identical gears, gears A1 and B1, fixed to the bottom of the housing by screws. This forms a simple secondary gear train, further increasing the overall gear ratio.
 
-At the other end of the box, identical gears to A1 and B1 are fixed to the floor parallel 
-to gears A1 and B1, let us call them A2 and B2. By using timing belts 
-(shown in Figure~\ref{fig:wolf_belt_claw}), 
-two pulleys and belts systems are formed between gears A1,2 and B1,2, allowing a higher 
-efficiency with no slippage whilst dampening noise. Challenges in this design being the 
-timing belts being difficult to put together as the timing belts are required to be flexible 
-for our design.  When 3D printing each section of the timing belts, removing the supports 
-was an arduous task with low success rates, hence we adapted the gears A1,2 and B1,2  
-as shown in figure~\ref{fig:wolf_belt_claw} to use the open timing belts and timing pulleys in the 
-innovation lab. The top section will allow the gears A1 and B1 to mesh properly with 
-the sun gear, the bottom half would be glued into the timing pulley, meaning that 
-gears A2 and B2 would just be a timing pulley with a fixed rod through the centre, 
-fixed to the bottom of the box.  
+At the other end of the box, identical gears to A1 and B1 are fixed to the floor parallel to gears A1 and B1, let us call them A2 and B2. By using timing belts (shown in Figure~\ref{fig:wolf_belt_claw}), two pulleys and belts systems are formed between gears A1,2 and B1,2, increasing efficiency with no slippage. Challenges in this design being the timing belts being difficult to put together as the timing belts are required to be flexible for our design.  When 3D printing each section of the timing belts, removing the supports was an arduous task with low success rates, hence we adapted the gears A1,2 and B1,2  as shown in figure~\ref{fig:wolf_belt_claw} to use the open timing belts and timing pulleys in the innovation lab. The top section will enable the gears A1 and B1 to mesh properly with the sun gear, the bottom half would be glued into the timing pulley, meaning that gears A2 and B2 would just be a timing pulley with a fixed rod through the centre, fixed to the bottom of the housing. 
 
 \begin{figure}[htbp]
     \centering
@@ -384,25 +264,13 @@ fixed to the bottom of the box.
     \caption{Linear velocity of input and blade out}\label{fig:planetray_vel}
 \end{figure}
 
-The two side blades would be fixed to these pulley and belt systems (A1,2 and B1,2) using 
-superglue on the end of the blade, with a centre blade connected to a third pulley and belt 
-system as shown in figure~\ref{fig:wolf_belt_claw}. The blades are connected to ensure all three blades slide out 
-simultaneously, and stability of the centre blade can be increased by integrating a third pulley 
-and belt system. This allows the motion of the centre blade to be parallel to the side blades 
-when the whole mechanism is moving or when there is a force applied to the tip of the blades. 
-When there is force applied on the blades, it may be impractical to hold the blades to the belt 
-only by superglue at the end section of the blade, hence screwing the blades to the belt would 
-make this mechanism more secure. Ensuring the open timing belts are tight would be challenging 
-as the glue requires some time to dry and the timing belts must be held together tightly during 
-this time, the difficulty in this being that it must align perfectly with the other end to ensure 
-perfectly horizontal motion of blades.  
-
+The two side blades would be fixed to these pulley and belt systems (A1,2 and B1,2) using superglue on the end of the blade, with a centre blade connected to a third pulley and belt system as shown in figure~\ref{fig:wolf_belt_claw}. The blades are connected to ensure all three blades slide out simultaneously, and stability of the centre blade can be increased by integrating a third pulley and belt system. This allows the motion of the centre blade to be parallel to the side blades when the whole mechanism is moving or when there is a force applied to the tip of the blades. When there is force applied on the blades, it may be impractical to hold the blades to the belt only by superglue at the end section of the blade, hence screwing the blades to the belt would maintain the position of the blades. Ensuring the open timing belts are tight would be challenging as the glue requires some time to dry and the timing belts must be held together tightly during this time, the difficulty in this being that it must align perfectly with the other end to ensure perfectly horizontal motion of blades. 
 
 \pagebreak
 
 \subsubsection{Version II:\ Compound Gear Train}
-The compound gear train (Figure~\ref{fig:gear_comp}) is dependent on the contact between gears, reflecting on the objective 
-of our mechanism, it is essential to ensure the gears mesh regardless of motion of mechanism.  
+
+The compound gear train (Figure~\ref{fig:gear_comp}) is dependent on the contact between gears, reflecting on the objective of our mechanism, it is essential to ensure the gears mesh regardless of motion of mechanism. 
 
 \begin{figure}[htbp]
 	\centering
@@ -416,37 +284,18 @@ of our mechanism, it is essential to ensure the gears mesh regardless of motion 
 	\caption{design of version II}\label{fig:version1}
 \end{figure}
 
-Gear A will be connected to the floor by a screw, similar to gears A1,2 and B1,2 in version one, 
-this screw will ensure the gears are in a fixed position yet allow rotational movement to ensure 
-meshing between gears. The same procedure has been utilised for gears B and D, with gear C resting 
-on an upside-down “T” shaped support which is fixed to the top of the box. Gear C has been modified 
-to a similar design to gears A1 and B1, with the upper half glued into the timing pulley and the
-lower half meshing with gear D.  
+Gear A will be connected to the floor by a screw, similar to gears A1,2 and B1,2 in version one, this screw will ensure the gears are in a fixed position yet allow rotational movement to ensure meshing between gears. The same procedure has been utilised for gears B and D, with gear C resting on an upside-down “T” shaped support which is fixed to the top of the housing. Gear C has been modified to a similar design to gears A1 and B1, with the upper half glued into the timing pulley and the lower half meshing with gear D. 
 
-The pulley and belt system of this version would be supported by two “T” shaped supports, 
-with the end of the centre blade screwed to the side of the timing belt. In this version, 
-the centre blade provides the driving force to the two side blades. To increase 
-the stability of the blades, another two pulley and belt systems guides the side blades. 
-The timing pulleys could be supported by a vertical rod with two horizontal plates, 
-as shown in figure~\ref{fig:gear_comp_mech}, this support would be made of three components, 
-these three components ensure that the supports are fully vertical. The difficulty of this 
-involves glueing the supports vertically (in the box) and parallel 
-to the other pulley and belt transmissions.  
-
-
+The pulley and belt system of this version would be supported by two “T” shaped supports, with the end of the centre blade screwed to the side of the timing belt. In this version, the centre blade provides the driving force to the two side blades. To increase the stability of the blades, another two pulley and belt systems guides the motion of the side blades. The timing pulleys would be supported by a vertical rod with two horizontal plates, as shown in figure~\ref{fig:gear_comp_mech}, this support would be made of three components, these three components ensure that the supports are fully vertical. The difficulty of this involves glueing the supports vertically (in the box) and parallel to the other pulley and belt transmissions. 
 
 \pagebreak
 
-\section{Mathematical Modelling and Analysis}	%% ============================ SECTION III =================================
+\section{Mathematical Modelling and Analysis}	%% ============================ SECTION III 
 \subsection{Fingers and Wrist Modelling}
 \textbf{Finger and Overhead String Movement}
 
-The light, inextensible string is tied to the loop on the DIP joint, 
-and is guided through the other loops, with the other end connected to the 
-ring gear of the planetary gear. 
-The linear movement of the string is created by the finger’s flexion, see figure 3. 
+The light, inextensible string is tied to the loop on the DIP joint, and is guided through the other loops, with the other end connected to the ring gear of the planetary gear. The linear movement of the string is created by the finger's flexion, see figure~\ref{fig:mid_finger}. 
 
-Figure~\ref{fig:mid_finger} has two sub-figures, 
 Figure~\ref{fig:mid_finger_curved} describes the details and data when finger curved,
 Figure~\ref{fig:mid_finger_extended} describes the details and data when finger extended.
 
@@ -483,36 +332,16 @@ Total displacement of the string overhead by calculation:
 
 \textbf{Wrist Movement}
 
-The two degrees of freedom in our wrist are 
-flexion/extension and radial/ulnar deviation, 
-with the two rotational centre almost coinciding, 
-it becomes difficult to design the mechanical 
-structure of the exoskeleton. Thus, we designed 
-a mechanism that is functionally similar to a 
-universal joint, see figure 4. The palm is 
-represented as an oval, and the linkage structure 
-connecting the fingers to the palm allows 
-the 2 DOF in the MCP joint.  
+The two degrees of freedom in our wrist are flexion/extension and radial/ulnar deviation, with the two rotational centre almost coinciding, it becomes difficult to design the mechanical structure of the exoskeleton. Thus, we designed a mechanism that is functionally similar to a universal joint, see Figure~\ref{fig:wrist_demo}. The palm is represented as an oval, and the linkage structure connecting the fingers to the palm allows the $2$ DOF in the MCP joint. 
 
-For the robotic hand exoskeleton, there are 
-a total of 15 links and 13 joints, giving 
-rise to 22 DOFs in the hand exoskeleton.  
+For the robotic hand exoskeleton, there are a total of $22$ links and $20$ joints, giving rise to $22$ DOFs in the hand exoskeleton. 
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width = 0.7\textwidth]{imgs/wrist_demo.PNG}
 	\caption{demostration of wrist}\label{fig:wrist_demo}
 \end{figure}
 
-\textbf{Conclusion}
-
-In terms of a robotic hand exoskeleton, 
-there are totally $3 \times 4 + 3= 15$ links 
-and $3 \times 4 + 2 = 14$ joints in 3 fingers and a wrist.
-
-In addition, there are 14 DOFs in hand exoskeleton.
-
-\pagebreak
 \subsection{Wolf Claw Mechanism Version 1: Planetary Gear}
 
 \begin{figure}[htbp]
@@ -521,16 +350,7 @@ In addition, there are 14 DOFs in hand exoskeleton.
 	\caption{gear A1 and B1}\label{fig:planetary_box_a1b1}
 \end{figure}
 
-A schematic diagram of version one's planetary gear is shown in Figure~\ref{fig:planetary_box}. 
-The planetary gear is a fixed carrier gear, with the carrier (illustrated in dark blue) 
-fixed to the upper inner surface of the box using three screws. The sun gear is extended 
-downwards to mesh with two identical spur gears A1 and B1, see figure~\ref{fig:planetary_box_a1b1}, secured to the 
-base of the housing using screws, forming a simple secondary gear train. To convert this 
-rotary motion into linear motion, two identical gears A2 and B2, timing pulleys, are screwed 
-to the bottom of the box, parallel to A1 and B1 (the screws are not tight, the timing pulleys 
-and gears A1 and B1 can still rotate about its centre of rotation, the screw). The end of gears 
-A1 and B1 are glued into timing pulleys, timing belts connect A1--A2 and B1--B2, forming two 
-pulley and belt systems, enabling low-noise transmission without slippage, see Figure~\ref{fig:wolf_belt_claw}.  
+A schematic diagram of version one's planetary gear is shown in Figure~\ref{fig:planetary_box}. The planetary gear is a fixed carrier gear, with the carrier (illustrated in dark blue) fixed to the upper inner surface of the housing using three screws. The sun gear is extended downwards to mesh with two identical spur gears A1 and B1, see figure~\ref{fig:planetary_box_a1b1}, secured to the base of the housing using screws, forming a simple secondary gear train. To convert this rotary motion into linear motion, two identical gears A2 and B2, timing pulleys, are screwed to the bottom of the box, parallel to A1 and B1 (the screws are not tight, the timing pulleys and gears A1 and B1 can still rotate about its centre of rotation, the screw). The end of gears A1 and B1 are glued into timing pulleys, timing belts connect A1--A2 and B1--B2, forming two pulley and belt systems, enabling low-noise transmission without slippage, see Figure~\ref{fig:wolf_belt_claw}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -538,23 +358,23 @@ pulley and belt systems, enabling low-noise transmission without slippage, see F
 	\caption{Kinematic scheme of the planetary gear mechanism}\label{fig:planetary_box}
 \end{figure}
 
-The design parameters of the planetary gear system are summarized as follows. The sun gear has $18$ teeth, the inner and outer sides of the compound planet gear have $42$ and $15$ teeth respectively, and the ring gear has $75$ teeth, satisfying the concentric condition:
+The design parameters of the planetary gear system are summarised as followed: The sun gear has 18 teeth, the inner and outer sides of the compound planet gear have $42$ and $15$ teeth respectively, and the ring gear has $75$ teeth, satisfying the concentric condition
 
 \begin{equation*}
-	N_r = N_s + N_\text{p-in} + N_\text{}{p-out} = {75}\\
+	N_r = N_s + N_\text{p-in} + N_\text{}{p-out} = 75
 \end{equation*}
 
-Each of the two secondary gears A1 and B1 has $36$ teeth, and three identical compound planet gears are evenly distributed at 120° intervals to maintain torque balance and provide structural stability. 
+Each of the two secondary gears A1 and B1 has $36$ teeth, and three identical compound planet gears are evenly distributed at $120\deg$ intervals to maintain torque balance and provide structural stability.
 
-The assembly conditions are fulfilled by the following expression: 
+The assembly conditions are fulfilled by the following expression:
 
 \begin{equation*}
 	\frac{N_s N_\text{p-out} + N_r N_\text{p-in}}{3} = 1140 \in \mathbb{Z}
 \end{equation*}
 
-The side blades are fixed to the sides of the belt system using two screws near the end to prevent detachment. The three blades are connected with the two side blades providing a driving force to the centre blade, this centre blade is connected to a third pulley and belt system to increase stability when the blades slide simultaneously. Belt tensioning is required to maintain a fully horizontal motion for blades. 
+The side blades are fixed to the sides of the belt system using two screws near the end to prevent detachment. The three blades are connected with the two side blades providing a driving force to the centre blade, this centre blade is connected to a third pulley and belt system to increase stability when the blades slide simultaneously. Belt tensioning is required to maintain a fully horizontal motion for blades (see Figure~\ref{fig:blade3} and Figure~\ref{fig:wolf_belt_claw}).
 
-For a fixed carried planetary gear, the kinematic relationship between the angular velocities of the ring and sun gears can be expressed using Willis equation: 
+For a fixed carried planetary gear, the kinematic relationship between the angular velocities of the ring and sun gears can be expressed using Willis equation:
 
 \begin{align}
 	\frac{\omega_r - \omega_c}{\omega_s - \omega_c} &= 
@@ -605,7 +425,6 @@ Therefore, the total theoretical transmission ratio of the system is approximate
 	i_{\text{total}} = \left( 1 + \frac{N_r N_{p-\text{in}}}{N_s N_{p-\text{out}}}\right) \times \frac{Z_{A1}}{N_s} \times \frac{r_{A2}}{r_{A1}}
 \end{equation*}
 
-
 Figure 3 illustrates the relationship between the input ring gear angle, \(\theta_r\), and the output sun gear angle, \(\theta_s\), derived from equations~\eqref{eq:omega_N}~\eqref{eq:gear_ratio}. The results demonstrate a linear inverse relationship between the two variables, with a gradient of \(-4.17\), indicating opposite rotation directions of the input and output components and constant total transmission ratio throughout motion.
 
 \begin{figure}[htbp]
@@ -616,13 +435,114 @@ Figure 3 illustrates the relationship between the input ring gear angle, \(\thet
 
 The mathematical model satisfies all design requirements. The planetary gear stage provides a reduction ratio of approximately $12.7 : 1$, the secondary gear stage contributes an additional $1.2 : 1$ ratio, and the belt stage maintains a $1: 1$ transmission. The total reduction ratio of $15.2 : 1$ enables high torque output while ensuring synchronized linear motion of the blades. 
 
-
+\pagebreak
 
 \subsection{Wolf Claw Mechanism Version 2: Compound Gear Train}
 
-% ======== SECTION IV =========
+Version two replaces the compound planetary gear and the simple secondary gear train in version one with a compound gear train, simplifying assemble and improving torque transmission. The rope is connected to the drum of gear A, serving as the driving gear. Gears B and D form a compound pair as they are coaxial, transferring motion to the output gear, gear C. This framework achieves a higher torque output through two successive reduction stages, as shown in Figure~\ref{fig:gear_comp}.
 
-\section{Conclusion and Future Work}			%% ============================ SECTION IV ===================================
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 0.9\textwidth]{imgs/schematic_compound_gear.png}
+	\caption{schematic of the compound gear-belt system showing motion transmission from the rope to the claw blades.}\label{fig:schematic_compound_gear}
+\end{figure}
+
+Let $S(t)$ be the normalized displacement of the rope, the fraction of total motion completed between $t = 0$ and $t = T$:
+
+\begin{equation*}
+	\begin{array}{ll}
+		\ddot{S}(0) = 0, & \ddot{S}(T) = 1 \\
+		\dot{S}(0) = 0,  & \dot{S}(T) = 0 \\
+		S(0) = 0,        & S(T) = 0
+	\end{array}
+\end{equation*}
+
+These six boundary conditions ensure that the motion starts and ends smoothly (with zero velocity and acceleration at both ends), we use a 5th-degree polynomial to satisfy these six boundary conditions:
+
+\begin{align*}
+	S(t) 		&= a_0 + a_1 t + a_2 t^2 + a_3 t^3 + a_4 t^4 + a_5 t^5 \\
+	\dot{S}(t)  &= a_1 + 2a_2 t + 3a_3 t^2 + 4a_4 t^3 + 5a_5 t^4 \\
+	\ddot{S}(t) &= 2a_2 + 6a_3 t + 12a_4 t^2 + 20a_5 t^3
+\end{align*}
+
+Substituting the boundary conditions into the above equations we have:
+
+\begin{equation*}
+	a_1 = 0, \quad 
+	a_2 = 0, \quad 
+	a_3 = 10 ( \frac{t}{T} )^3, \quad 
+	a_4 = -15 ( \frac{t}{T} )^4, \quad 
+	a_5 = 6 (\frac{t}{T})^5
+\end{equation*}
+
+The rope displacement, $L(t)$ follows a fifth-degree polynomial to ensure smooth motion:
+
+\begin{align*}
+	L(t) &= L_{\text{max}} S(t), \\
+	S(t) &= 10 \times ( \frac{t}{T} )^{3} - 15 \times (\frac{t}{T})^{4} + 6 \times ( \frac{t}{T} )^{5}
+\end{align*}
+
+where $L_{\text{max}}$ is the maximum rope displacement and $T$ is the total motion time.
+
+Since the rope is wound around a drum of radius $r_{\text{drum}}$, the angular displacement of gear A is:
+
+\begin{equation*}
+	\theta_A = \frac{L(t)}{r_{\text{drum}}} \quad (2)
+\end{equation*}
+
+For the gear train $(A \to B \& D \to C)$, the angular velocity relationships are:
+
+\begin{equation*}
+	\frac{\omega_A}{\omega_B}= -\frac{N_B}{N_A}, \quad
+	\quad \omega_B= \omega_D, \quad
+	\quad \frac{\omega_D}{\omega_C}= -\frac{N_C}{N_D}
+\end{equation*}
+
+Thus, the total transmission ratio between gears A and C is:
+
+\begin{equation*}
+i_{\text{total}} = \frac{\omega_A}{\omega_C} = \frac{N_B}{N_A} \times \frac{N_C}{N_D}
+\end{equation*}
+
+and the angular displacement relationship is:
+
+\begin{equation*}
+\theta_C = \theta_A \frac{N_A N_D}{N_B N_C}
+\end{equation*}
+
+Since the belt movement is directly proportional to the angular displacement of gear C, the linear displacement of the blade linkage can be expressed as:
+
+\begin{equation*}
+x(t) = \frac{r_C N_A N_D}{r_{\text{drum}} N_B N_C} L(t)
+\end{equation*}
+
+Substituting \( L(t) = L_{\text{max}} S(t) \):
+
+\begin{equation*}
+x(t) = \frac{r_C N_A N_D L_{\text{max}}}{r_{\text{drum}} N_B N_C} S(t)
+\end{equation*}
+
+This equation defines the smooth linear motion of the blade linkage as a function of normalised time t. The total transmission ratio for the compound gear train is:
+
+\begin{equation*}
+i_{\text{total}} = \frac{N_B}{N_A} \times \frac{N_C}{N_D}
+\end{equation*}
+
+Given $\frac{N_B}{N_A} = 3$ and $\frac{N_C}{N_D} = 4$, the total reduction ratio is $i_{total} =12$.
+
+This indicates that the blade linkage provides twelve times the input torque, with the overall design ensuring compact structure, high torque transmission efficiency, and smooth finger motion.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 0.9\textwidth]{imgs/relation_input_output_angles.png}
+	\caption{Theoretical relation between input and output angles}\label{fig:relation_input_output_angles}
+\end{figure}
+
+The Figure~\ref{fig:relation_input_output_angles} illustrates the linear relationship between the input gear rotation, $\theta_A$, and the output gear rotation, $\theta_C$, in the compound gear train. With the gradient representing the overall transmission ratio $i_\text{total} =12$. 
+
+\pagebreak
+
+\section{Conclusion and Future Work}			%% ============================ SECTION IV 
 
 \pagebreak
 
