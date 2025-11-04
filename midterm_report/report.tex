@@ -79,10 +79,10 @@ be further examined in section 2.3, wolf claw mechanism comparison.
 \subsection{Similar Mechanisms}
 
 There are many applications of exoskeleton robotic hands in 
-diverse fields (e.g. rehabilitation medicine) in which most 
+diverse fields (e.g.\ rehabilitation medicine) in which most 
 of these exoskeleton hands are powered. Our mechanism is purely 
 passive as it allows a lightweight approach and only relies on 
-the user’s instinctive movements. Powered exoskeleton robotic 
+the user's instinctive movements. Powered exoskeleton robotic 
 hands tend to have higher demands regarding control schemes 
 and mechanical design (involving actuators).  
 
@@ -183,19 +183,25 @@ Details of the transmission process shown below:
 
 \pagebreak
 
-\subsection{Hand Exoskeleton Mechanisms}
+\subsection{Hand Exoskeleton Mechanisms Comparison}
 
 \subsubsection{Hand Biomechanics}
 Most human hands have 19 bones and 14~\cite{ons_stalking_2025} joints\cite{heo2012current}, excluding the carpal bones.
 
 The design of the hand exoskeleton needs to be based on the natural anatomy of the 
-human hand~(figure~\ref{fig:hand_skeleton}). We have to focus on MCP, PIP, and 
+human hand~(figure~\ref{fig:hand_label}). We have to focus on MCP, PIP, and 
 DIP joints, because they ensure the finger can flex and extend easily.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.4\textwidth]{imgs/bones_joints_of_hand.png}
-	\caption{bones and joints of a human hand\cite{heo2012current}}\label{fig:hand_skeleton}
+	\subfloat[bones and joints of a human hand\cite{heo2012current}\label{fig:hand_skeleton}]{
+		\includegraphics[width=0.45\textwidth]{imgs/bones_joints_of_hand.png}
+	}
+	\hfill
+	\subfloat[model of human hand\cite{rosen2019wearableC8}\label{fig:hand_model}]{
+		\includegraphics[width=0.45\textwidth]{imgs/model_of_the_hand.png}
+	}
+	\caption{Human Hand}\label{fig:hand_label}
 \end{figure}
 
 The finger joints include 3 types of joints majorly\cite{rosen2019wearableC8}:
@@ -210,7 +216,7 @@ Distal Interphalangeal Joint (DIP): \\
 Has 1 degree of freedom (flexion/extension).
 
 In the resting posture, the angle of MCP joint is approximately 45°, 
-whereas the PIP joint is between 30°--45°, and the DIP joint is between 10°--20°. 
+whereas the PIP joint is between 30°--45°, and the DIP joint is between 10°--20°.~\cite{heo2012current}
 To define the range of motion and ensure safety in exoskeleton design, 
 it is essential to align our mechanism to the human anatomy. 
 
@@ -245,12 +251,18 @@ Therefore, the direct joint-center matching method offers the most
 efficient and practical solution for this application. 
 We have chosen to take a similar approach
 
+\pagebreak
+
 \subsection{Wolf Claw Mechanism}
 \textbf{Design of wolf claw}
 
 Consider a wolf claw made of multiple sections:  
 
-\textbf{FIGURE :::: TODO}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.88\textwidth]{imgs/belt_and_claw.PNG}
+    \caption{wolf claw blade movements section}\label{fig:wolf_belt_claw}
+\end{figure}
 
 For this prototype the whole mechanism would be more portable due to these retractable features. 
 For these retractable features to be implemented, the inner structure of each section of the wolf 
@@ -271,7 +283,13 @@ However, this approach would lead to the box containing the wolf claw mechanism 
 problems that arise from this include how this box is going to be stabilised to the arm as it 
 would be longer than a forearm of the average human.  
 
-\textbf{FIGURE :::: TODO}
+\pagebreak
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.88\textwidth]{imgs/blade3.PNG}
+    \caption{3 blades}\label{fig:blade3}
+\end{figure}
 
 The three blades are connected by a square bar along the top of the blades, 
 perpendicular in the direction of the blades. These blades are not sharpened 
@@ -280,7 +298,7 @@ these blades would have a sandpaper coating and be non-backdrivable. To allow th
 non-backdrivable feature, a spring plunger is integrated at the side of the box, 
 locking the two side blades in position. In this mechanism we aim to make to make 
 the wolf claw retract semi-automatically, hence we modified the spring plungers 
-(see figure~\ref{fig:hand_skeleton}) so that they can retract by applying force to the handle. 
+(see figure~\ref{fig:wolf_belt_claw}) so that they can retract by applying force to the handle. 
 
 \textbf{Transmission Mechanism Selection}
 
@@ -290,13 +308,13 @@ the this would be using the structure of a compound gear train, let the two vers
 be versions one and two respectively. Both methods start with rotary-to-rotary motion, 
 this is then converted from rotary to translational motion through the use of pulley and belt systems.  
 
-\textbf{Version I: Planetary Gear}
+\textbf{Version I:\ Planetary Gear}
 
 This version provides a higher gear ratio with a 
 more compact and stable design but requires high precision in 
 laser cutting and 3D printing as several components mesh into the same gear.  
 
-\textbf{Version II: Compound Gear Train}
+\textbf{Version II:\ Compound Gear Train}
 
 This version is simpler to print and has a higher 
 flexibility in gear ratios, yet there is a lack of stability in the 
@@ -304,34 +322,35 @@ blades as the centre blade drives the two side blades.
 
 Therefore, we would use version I 
 
-\subsubsection{Version I: Planetary Gear}
+\subsubsection{Version I:\ Planetary Gear}
 
 The light inextensible string would be connected to the ring gear of 
 the fixed carrier planetary gear. Both the fixed carrier gear and the 
-sun gear (output for the planetary gear) would be extended to a height 
-of \textbf{DATA NEEDED}, the fixed carrier gear would be fixed to the inside of top of the box. 
-The sun gear would mesh with another two gears, gears A1 and B1, where A1 and 
-B1 are identical, fixed to the bottom of the box by screws. This forms a simple 
+sun gear would be extended to a height 
+of $7$~mm, the fixed carrier gear would be 
+fixed to the inside of top of the box. 
+The sun gear will rotate together with another gear and mesh with 
+gears A1 and B1 (shown Figure~\ref{fig:wolf_belt_claw}), 
+which are identical and are fixed to the bottom of the box by screws.
+This forms a simple 
 gear train, further increasing the overall gear ratio. 
 
-At the other end of the box, identical gears to A1 and B1 are fixed to the 
-floor parallel to gears A1 and B1, let us call them A2 and B2. By using 
-timing belts (shown in \textbf{COLOUR NEEDED}), two pulleys and belts systems are formed between 
+At the other end of the box, identical gears to A1 and B1
+are fixed to the floor parallel to gears A1 and B1, let us call them A2 and B2(shown Figure~\ref{fig:wolf_belt_claw}).
+By using timing belts, two pulleys and belts systems are formed between 
 gears A1,2 and B1,2, allowing a higher efficiency with no slippage whilst dampening noise. 
 Challenges in this design being the timing belts being difficult to put together as the 
-timing belts are required to be flexible for our design.  When 3D printing each section 
+timing belts (labelled in Figure~\ref{fig:wolf_belt_claw}) are required to be flexible for our design.  When 3D printing each section 
 of the timing belts, removing the supports was an arduous task with low success rates, 
-hence we adapted the gears A1,2 and B1,2  as shown in figure \textbf{NOT SURE} to use the open timing 
+hence we adapted the gears A1,2 and B1,2 (shown Figure~\ref{fig:wolf_belt_claw}) to use the open timing 
 belts and timing pulleys in the innovation lab. The top section will allow the gears A1 
 and B1 to mesh properly with the sun gear, the bottom half would be glued into the timing 
 pulley, meaning that gears A2 and B2 would just be a timing pulley with a fixed rod through 
 the centre, fixed to the bottom of the box.  
 
-\textbf{FIGURE ::::: TODO labelled diagram }
-
 The two side blades would be fixed to these pulley and belt systems (A1,2 and B1,2) using 
 superglue on the end of the blade, with a centre blade connected to a third pulley and belt 
-system as shown in figure \textbf{NOT SURE}. The blades are connected to ensure all three blades slide out 
+system as shown in figure~\ref{fig:wolf_belt_claw}. The blades are connected to ensure all three blades slide out 
 simultaneously, and stability of the centre blade can be increased by integrating a third pulley 
 and belt system. This allows the motion of the centre blade to be parallel to the side blades 
 when the whole mechanism is moving or when there is a force applied to the tip of the blades. 
@@ -342,11 +361,25 @@ as the glue requires some time to dry and the timing belts must be held together
 this time, the difficulty in this being that it must align perfectly with the other end to ensure 
 perfectly horizontal motion of blades.  
 
-\textbf{FIGURE ::::::: TODO time against length of bade out }
+\textbf{FIGURE::::::: TODO time against length of bade out }
 
-\subsubsection{Compound Gear Train}
-The compound gear train is dependent on the contact between gears, reflecting on the objective 
+\pagebreak
+
+\subsubsection{Version II:\ Compound Gear Train}
+The compound gear train (Figure~\ref{fig:gear_comp}) is dependent on the contact between gears, reflecting on the objective 
 of our mechanism, it is essential to ensure the gears mesh regardless of motion of mechanism.  
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[compound gear train\label{fig:gear_comp}]{
+		\includegraphics[width=0.45\textwidth]{imgs/gear_box_comp.PNG}
+	}
+	\hfill
+	\subfloat[compound gears, pulley and belt system\label{fig:gear_comp_mech}]{
+		\includegraphics[width=0.45\textwidth]{imgs/Compound-Gear-and-mech.jpg}
+	}
+	\caption{design of version II}\label{fig:version1}
+\end{figure}
 
 Gear A will be connected to the floor by a screw, similar to gears A1,2 and B1,2 in version one, 
 this screw will ensure the gears are in a fixed position yet allow rotational movement to ensure 
@@ -359,16 +392,14 @@ The pulley and belt system of this version would be supported by two “T” sha
 the end of the centre blade screwed to the side of the timing belt. In this version, the centre 
 blade provides the driving force to the two side blades. To increase the stability of the blades, 
 another two pulley and belt systems guides the side blades. The timing pulleys could be supported 
-by a vertical rod with two horizontal plates, as shown in figure \textbf{NOT SURE}, this support would be made 
+by a vertical rod with two horizontal plates, as shown in figure~\ref{fig:wolf_belt_claw}, this support would be made 
 of three components. The first being a cylindrical dowel, the second and third components consisting 
 of a horizontal plate with a cylindrical dowel in the centre. The tip of this cylindrical centre 
 (for component 2) would be designed such that it fits the bottom of the cylindrical centre of component 3, 
-shown in \textbf{COLOUR NEEDED}. The difficulty of this involves glueing the supports vertical and parallel to the other pulley 
+shown in light blue~\ref{fig:gear_comp_mech}. The difficulty of this involves glueing the supports vertical and parallel to the other pulley 
 and belt transmissions.  
 
-\textbf{FIGURE ::::::: TODO labelled diagram }
 
-\textbf{FIGURE ::::::: TODO time against length of blade out }
 
 
 \pagebreak
