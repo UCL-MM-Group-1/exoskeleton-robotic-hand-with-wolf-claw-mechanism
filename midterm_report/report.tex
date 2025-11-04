@@ -120,12 +120,12 @@ or it could be used in further designing or developing powered exoskeleton hands
 
 \subsection{Drive Method and Transmission}
 This robotic hand exoskeleton uses an acceleration-based machinery system, 
-amplifying the movements of the finger. 
+amplifying the movements of the finger.  
 
 This is achieved using a planetary gear mechanism connected to a string 
-transmission and a pulley and belt system.
+transmission and a pulley and belt system.  
 
-Details of the transmission process shown below:
+Details of the transmission process shown below: 
 
 \begin{center}
 	\begin{tikzpicture}[scale=0.8]
@@ -186,11 +186,14 @@ Details of the transmission process shown below:
 \subsection{Hand Exoskeleton Mechanisms Comparison}
 
 \subsubsection{Hand Biomechanics}
-Most human hands have 19 bones and 14~\cite{ons_stalking_2025} joints\cite{heo2012current}, excluding the carpal bones.
-
-The design of the hand exoskeleton needs to be based on the natural anatomy of the 
-human hand~(figure~\ref{fig:hand_label}). We have to focus on MCP, PIP, and 
-DIP joints, because they ensure the finger can flex and extend easily.
+The exoskeleton design is based on the anatomy of a hand (figure~\ref{fig:hand_label}), 
+consisting of 19 bones and 14 joints~\cite{ons_stalking_2025}, excluding the carpal bones. The 
+exclusion of the carpal bones (eight small bones in total) limits the 
+extent the user’s hand can bend whilst wearing this exoskeleton hand, 
+this was deliberately chosen based on multiple factors such as the 
+increasing mass and inertia of the exoskeleton, the noise generated 
+from the movement of fingers and the limited space to securely link 
+the carpal bones whilst not affecting the overall movement of adjacent fingers.  
 
 \begin{figure}[htbp]
 	\centering
@@ -204,37 +207,39 @@ DIP joints, because they ensure the finger can flex and extend easily.
 	\caption{Human Hand}\label{fig:hand_label}
 \end{figure}
 
-The finger joints include 3 types of joints majorly\cite{rosen2019wearableC8}:
+\textbf{DOF of finger joints~\cite{rosen2019wearableC8}}
 
-Metacarpophalangeal Joint (MCP): \\
-Has 2 degrees of freedom (flexion/extension, abduction/adduction).
+Metacarpophalangeal joint (\textbf{MCP}): \\
+2 DOF (flexion/extension, abduction/adduction) 
 
-Proximal Interphalangeal Joint (PIP): \\
-Has 1 degree of freedom (flexion/extension).
+Distal Interphalangeal joint (\textbf{DIP}) and proximal Interphalangeal joint (\textbf{PIP}): \\
+1DOF (flexion/extension), this is a 1 DOF kinematic architecture  
 
-Distal Interphalangeal Joint (DIP): \\
-Has 1 degree of freedom (flexion/extension).
+Carpometacarpal joint (\textbf{CMC}): \\
+2 DOF (flexion/extension, abduction/adduction), a saddle joint, 
+allowing circumduction and opposition movements. There is a third 
+degree of freedom in the thumb that enables axial rotation/opposition 
+which we have not included as it is unnecessary for the aim and 
+objective of our mechanism, increasing the mechanical complexity, mass and inertia. 
 
-In the resting posture, the angle of MCP joint is approximately 45°, 
-whereas the PIP joint is between 30°--45°, and the DIP joint is between 10°--20°.~\cite{heo2012current}
-To define the range of motion and ensure safety in exoskeleton design, 
-it is essential to align our mechanism to the human anatomy. 
+The resting position for these joints is slight flexion, 
+the exoskeleton hand must also be at this position when 
+at rest to prevent joint stiffness and contractures and 
+increases joint laxity, which is ideal for immobilisation 
+and rehabilitation. In the resting position~\cite{heo2012current},
+the MCP joint is in 35°--45° of flexion, PIP joint being 30°--45°, 
+DIP joint: 10°--20°.  
 
 \textbf{Wrist Structure Analysis}
 
-The wrist has 2 degrees of freedom: flexion/extension and radial/ulnar deviation. 
+The human wrist has 3 degrees of freedom: 
+flexion/extension, radial/ulnar deviation and pronation/supination. 
+Reflecting upon the objective of our design, we consciously excluded 
+the pronation/supination rotational axis, which is where the forearm 
+is rotated to turn the palm since this would lead to the user being 
+injured more easily. 
 
 \subsubsection{Selection of Mechanism Type}
-
-
-Among the mechanisms illustrated in 
-Figure~\ref{fig:mechanism_types}, the direct matching of joint 
-centers (Figure~\ref{fig:mechanism_types}.a) was 
-selected for our design because it provides a  
-simple and compact solution without requiring additional 
-linkages or complex actuation. 
-Also, this approach minimises the mechanical complexity, 
-reduces system weight, and simplifies both fabrication and control.
 
 \begin{figure}[htbp]
     \centering
@@ -242,14 +247,42 @@ reduces system weight, and simplifies both fabrication and control.
     \caption{mechanism types\cite{heo2012current}}\label{fig:mechanism_types}
 \end{figure}
 
-The exoskeleton joints directly aligned with 
-the anatomical centers, which ensures high 
-accuracy and reliability. This is because 
-no additional compensation for motion is necessary. 
+\begin{figure}[htbp]
+	\centering
+	\subfloat[bones and joints of a human hand\label{fig:mid_with_connector}]{
+		\includegraphics[width=0.65\textwidth]{imgs/mid_with_connector.PNG}
+	}
+	\hfill
+	\subfloat[model of human hand\label{fig:fig_connector}]{
+		\includegraphics[width=0.3\textwidth]{imgs/fig_connector.PNG}
+	}
+	\caption{Human Hand}\label{fig:connecter}
+\end{figure}
 
-Therefore, the direct joint-center matching method offers the most 
-efficient and practical solution for this application. 
-We have chosen to take a similar approach
+The direct matching of joints (figure~\ref{fig:mechanism_types}) provides a structurally 
+simple and compact solution, removing unnecessary components 
+including complex actuation and additional linkages. 
+This arrangement minimises mechanical complexity and simplifies 
+fabrication and control, taking inspiration from this design, 
+we have adapted this design to allow 2 DOFs for the MCP joint. 
+This is achieved by connecting part of the MCP joint with another 
+component using a rod, with an identical component being linked 
+to the palm exoskeleton (see figure~\ref{fig:connecter}).       
+
+For the objective to be executed safely, a physical stopper 
+would be placed on both sides of the wrist exoskeleton to 
+prevent the hand from bending backwards. The fingers are 
+also at risk of bending backwards, hence, increasing the 
+thickness of the palm exoskeleton and creating indentations 
+would decrease the strain on the fingers by distributing 
+the force over the volume of the indentations.  
+
+To further reduce this strain, a layer of rubber 
+(or any material with a high friction coefficient) 
+could be added to the tip of the fingers and the 
+indentations in the palm. Consequently, we must 
+consider whether the user would be able to clench 
+their first quickly enough in a life-threatening situation. 
 
 \pagebreak
 
@@ -428,6 +461,14 @@ Figure~\ref{fig:mid_finger_extended} describes the details and data when finger 
 	}
 	\caption{mid-finger exoskeleton design}\label{fig:mid_finger}
 \end{figure}
+
+By modelling the motion of each section of the finger as an arc, 
+with the centre being the joint, we can deduced the extension of 
+the rope through the equation:
+
+\begin{equation*}
+\text{length of arc} = r\theta
+\end{equation*}
 
 Total displacement of the string overhead by calculation:
 
